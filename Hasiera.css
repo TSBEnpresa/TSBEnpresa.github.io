@@ -82,9 +82,9 @@ ul {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background: #00778B;
-    color: #00778B;
-    transition: background-color 1s ease-out;
+    background: #069db8;
+    color: #dfdddd;
+    transition: background-color 3s ease-out;
     outline: 0;
 }
 
