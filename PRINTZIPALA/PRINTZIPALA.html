@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>TSB | Printzipala</title>
+
+    <!-- LEHIOAREN IRUDIA -->
+    <link rel="shortcut icon" href="../irudiak/LOGO.png" />
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="PRINTZIPALA.css">
+    
+    <!----===== MENUAREN IKONOAK ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="RecibirDatos()"> 
+
+<!-- Menuaren hasiera -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../irudiak/LOGO.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"><p id="nombrePersona"></p></span>
+                    <span class="profession">Ongi etorri!</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Bilatu...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Hasiera</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-window icon' ></i>
+                            <span class="text nav-text">Aplikazioak</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+							<i class='bx bxs-face icon'></i>
+                            <span class="text nav-text">Gure Burua</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-contact icon' ></i>
+                            <span class="text nav-text">Kontaktua</span>
+                        </a>
+                    </li>
+
+                    <!--<li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>-->
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://google.es/">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Irten</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modu iluna</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+<!-- Menuaren bukaera -->
+
+    <section class="home">
+        <div class="text">Hasiera Orria</div>
+    </section>
+
+	<!-- Script-aren link-a -->
+	<script src="PRINTZIPALA.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- HASIERA TITULUA -->
+    <title>TSB | Hasiera</title>
+
+    <!-- LEHIOAREN IRUDIA -->
+    <link rel="shortcut icon" href="../irudiak/LOGO.png" />
+
+
+    <!-- CSS dokumentua -->
+    <link rel="stylesheet" href="Hasiera.css">
+
+    <!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+<body>
+    
+    <div class="content">
+
+        <h1 class="logo" style="color: #0b1116;">Hasiera <span>menua</span></h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                
+                <h3>HASIERA MENUA</h3>
+                <p> 
+                    Bete itzazu hurrengo datuak, robot bat ez zarela konprobatzeko
+                    (Datorik ez dugu gordeko, hemen sartutako guztia zuk bakarrik ikusi dezakezu).
+                </p>
+                
+                <form action="">
+                    <p>
+                        <label>Izen - Abizena *</label>
+                        <input required type="text" name="fullname" id="inputIzena" placeholder="Ander Ibañez...">
+                    </p>
+                    <p>
+                        <label>Korreoa</label>
+                        <input required type="email" name="email" id="inputEmail" placeholder="kontaktua@tsb.com">
+                    </p>
+                    <!--<p>
+                        <label>Telefono Zenbakia</label>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        <label>Affair</label>
+                        <input type="text" name="affair">
+                    </p>-->
+                    <p class="block">
+                       <label>Extra</label> 
+                        <textarea name="message" rows="1" placeholder="Zerbait guri iristea nahi baduzu, hemen sartu..."></textarea>
+                    </p>
+                    <p class="block">
+                        <button onclick="enviarDatos(event)">
+                            WEB ORRIRA SARTU
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Informazio gehiago</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Azkoitia</li>
+                    <li><i class="fas fa-phone"></i> (+34) 674 429 924</li>
+                    <li><i class="fas fa-envelope-open-text"></i> kontaktua@tsb.com</li>
+                </ul>
+                <p>Arazoren bat baduzu, jarri gurekin kontaktuan, segituan konponduko dugu.</p>
+                <p>www.tsb.es</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Kontaktuaren Script-a-->
+    <script src="Hasiera.js"></script>
+
+</body>
+</html>
