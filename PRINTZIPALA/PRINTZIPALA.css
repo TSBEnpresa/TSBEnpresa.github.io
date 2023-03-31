@@ -315,6 +315,19 @@ body.dark .home .text{
 /* MENUAREN CSS BUKAERA */
 @media screen and (max-width: 600px) {
     /* Cambios en el menú para vistas móviles */
+
+    .menu-bar .bottom-content .toggle-switch{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
     .sidebar {
       position: fixed;
       top: 0;
@@ -447,9 +460,9 @@ body.dark .home .text{
 @media only screen and (max-width: 601px) {
     .toggle-button {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 10px;
-        right: 10px;
+        right: 2px;
         z-index: 9999;
     }
 
