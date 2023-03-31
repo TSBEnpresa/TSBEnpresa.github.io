@@ -37,3 +37,25 @@ function RecibirDatos() {
     document.getElementById("nombrePersona").innerHTML = nombre;
     document.getElementById("correoPersona").innerHTML = email;
 }
+
+function toggleMenu() {
+    var menu = document.querySelector('.sidebar');
+    menu.classList.toggle('close');
+}
+
+// funcion para abrir y cerrar el menu
+/*function toggleMenu() {
+    const menu = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-menu');
+    
+    menu.classList.toggle('open');
+    toggleBtn.classList.toggle('open');
+  }*/
+
+
+/*function autoCloseMenu() {
+  setTimeout(function() {
+    // Cierra el menú después de 5 segundos
+    toggleMenu();
+  }, 5000);
+}*/

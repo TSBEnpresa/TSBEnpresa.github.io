@@ -2,9 +2,6 @@
 
 
 
-
-
-
 /* MENUAREN CSS HASIERA */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
@@ -316,3 +313,149 @@ body.dark .home .text{
 }
 
 /* MENUAREN CSS BUKAERA */
+@media screen and (max-width: 600px) {
+    /* Cambios en el menú para vistas móviles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      background-color: var(--sidebar-color);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .sidebar header {
+      background-color: var(--sidebar-color);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .sidebar header .toggle {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-color);
+      opacity: 0;
+      transition: var(--tran-03);
+    }
+  
+    .sidebar .menu-bar {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+  
+    .sidebar .menu {
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+  
+    .sidebar .menu li {
+      list-style: none;
+      margin: 0.5rem 0;
+      transition: var(--tran-03);
+    }
+  
+    .sidebar .menu a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: var(--tran-03);
+    }
+  
+    .sidebar .menu a:hover {
+      color: var(--primary-color);
+    }
+  
+    .sidebar .menu i {
+      font-size: 1.25rem;
+      margin-right: 0.5rem;
+    }
+  
+    .sidebar .menu .text {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  
+    .sidebar .menu .search-box {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+  
+    .sidebar .menu .search-box input {
+      width: 100%;
+      padding: 0.5rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      background-color: var(--primary-color-light);
+      color: var(--text-color);
+      transition: var(--tran-03);
+    }
+  
+    .sidebar .menu .search-box input:focus {
+      outline: none;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .sidebar .menu .search-box .icon {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      font-size: 0rem;
+      color: var(--text-color);
+    }
+  
+    .sidebar .bottom-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: right;
+      padding: 1.5rem;
+    }
+  
+    .sidebar .bottom-content li {
+      list-style: none;
+      margin: 0.5rem 0;
+      transition: var(--tran-03);
+    }
+  
+    .sidebar.close {
+      transform: translateY(-100%);
+    }
+
+    
+  }
+
+  .toggle-button {
+    display: none;
+}
+
+/* Estilos para el botón en dispositivos móviles */
+@media only screen and (max-width: 601px) {
+    .toggle-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+    }
+
+    #bx-search ::before{
+
+        opacity: 0;
+
+    }
+}
