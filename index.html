@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Web Orriaren captcha -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+
     <!-- HASIERA TITULUA -->
     <title>TSB | Hasiera</title>
 
@@ -37,7 +41,7 @@
                     (Datorik ez dugu gordeko, hemen sartutako guztia zuk bakarrik ikusi dezakezu).
                 </p>
                 
-                <form action="">
+                <form action="" method="POST">
                     <p>
                         <label>IzenAbizena</label>
                         <input class="required" type="text" name="fullname" id="inputIzena" placeholder="Ander Ibañez...">
@@ -59,10 +63,8 @@
                         <textarea name="message" rows="2" placeholder="Zerbait guri iristea nahi baduzu, hemen sartu..."></textarea>
                     </p>
 
-                    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeTS14lAAAAAN4qrU1euQlW2CBPOaStFMS4ppfN"></script>
+                    <div class="h-captcha" data-sitekey="3582ba5b-c88d-4b67-a871-483b95e772cf"></div>
 
-                    <div class="g-recaptcha" data-sitekey="6LeTS14lAAAAAN4qrU1euQlW2CBPOaStFMS4ppfN"></div>
-                    
                     <p class="block">
                         <button onclick="enviarDatos(event)">
                             WEB ORRIRA SARTU

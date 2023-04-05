@@ -20,10 +20,3 @@ function enviarDatos() {
     // Redirigir a la página donde se mostrarán los datos
     window.location.href = "../PRINTZIPALA/PRINTZIPALA.html";
 }
-
-
-    grecaptcha.enterprise.ready(function() {
-        grecaptcha.enterprise.execute('6LeTS14lAAAAAN4qrU1euQlW2CBPOaStFMS4ppfN', {action: 'login'}).then(function(token) {
-    
-        })
-    });
