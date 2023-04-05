@@ -25,6 +25,7 @@ ul {
 .logo {
     text-align: center;
     font-size: 3em;
+    padding: 20px;
 }
 
 .logo span {
@@ -98,8 +99,32 @@ ul {
     margin: 0 0 1rem 0;
 }
 
+/*@media (min-width: 1200px)
+{
+
+    .contact-form form input{
+
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 1200px)
+{
+
+    .contact-form form input{
+
+        width: 50%;
+
+    }
+
+}*/
+
+
 /* LARGE SIZE */
-@media(min-width: 700px) {
+@media(min-width: 989px) {
+
     body {
         padding: 0 4em;
     }
@@ -115,4 +140,5 @@ ul {
     .contact-info p {
         text-align: left;
     }
+
 }

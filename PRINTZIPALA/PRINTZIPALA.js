@@ -10,6 +10,7 @@ modeText = body.querySelector(".mode-text");
 
 toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
+    
 })
 
 searchBtn.addEventListener("click" , () =>{
@@ -27,6 +28,23 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
 
+function orriaKargatu(){
+
+    RecibirDatos();
+    
+
+}
+
+function openModal() {
+    const modalContainer = document.querySelector('.modal-container');
+    modalContainer.style.display = 'block';
+}
+
+function closeModal() {
+    const modalContainer = document.querySelector('.modal-container');
+    modalContainer.style.display = 'none';
+}
+
 function RecibirDatos() {
 
     // Obtener los valores almacenados en localStorage
@@ -41,17 +59,8 @@ function RecibirDatos() {
 function toggleMenu() {
     var menu = document.querySelector('.sidebar');
     menu.classList.toggle('close');
+
 }
-
-// funcion para abrir y cerrar el menu
-/*function toggleMenu() {
-    const menu = document.querySelector('.sidebar');
-    const toggleBtn = document.querySelector('.toggle-menu');
-    
-    menu.classList.toggle('open');
-    toggleBtn.classList.toggle('open');
-  }*/
-
 
 /*function autoCloseMenu() {
   setTimeout(function() {
@@ -59,3 +68,4 @@ function toggleMenu() {
     toggleMenu();
   }, 5000);
 }*/
+

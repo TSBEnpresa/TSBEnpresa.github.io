@@ -20,3 +20,23 @@ function enviarDatos() {
     // Redirigir a la página donde se mostrarán los datos
     window.location.href = "../PRINTZIPALA/PRINTZIPALA.html";
 }
+
+function validarFormulario() {
+
+    var requiredInputs = document.querySelectorAll('input[required], textarea[required]');
+    var valid = true;
+
+    requiredInputs.forEach(function(input) {
+
+        if (input.value.trim() === '') {
+            valid = false;
+            input.classList.add('invalid');
+        } else {
+            enviarDatos(event);
+            input.classList.remove('invalid');
+        }
+
+    });
+
+    return valid;
+}
