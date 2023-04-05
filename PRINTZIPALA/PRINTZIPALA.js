@@ -35,16 +35,6 @@ function orriaKargatu(){
 
 }
 
-function openModal() {
-    const modalContainer = document.querySelector('.modal-container');
-    modalContainer.style.display = 'block';
-}
-
-function closeModal() {
-    const modalContainer = document.querySelector('.modal-container');
-    modalContainer.style.display = 'none';
-}
-
 function RecibirDatos() {
 
     // Obtener los valores almacenados en localStorage
@@ -69,3 +59,24 @@ function toggleMenu() {
   }, 5000);
 }*/
 
+/* LOGIN MODALA IREKITZEN */
+function LoginOpenModal() {
+    const modalContainer = document.querySelector('.login');
+    modalContainer.style.display = 'block';
+}
+
+function LoginCloseModal() {
+    const modalContainer = document.querySelector('.login');
+    modalContainer.style.display = 'none';
+}
+
+/* REGISTER MODALA IREKITZEN */
+function RegisterOpenModal() {
+    const modalContainer = document.querySelector('.register');
+    modalContainer.style.display = 'block';
+}
+
+function RegisterCloseModal() {
+    const modalContainer = document.querySelector('.register');
+    modalContainer.style.display = 'none';
+}

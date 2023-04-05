@@ -503,7 +503,7 @@ body.dark .home .text{
 }
 
 .modal h2 {
-    margin-top: 0;
+    margin-top: 1;
 }
 
 .modal form {
@@ -518,12 +518,12 @@ body.dark .home .text{
 .modal input {
     padding: 5px;
     border-radius: 5px;
-    border: none;
+    border: 0.5px solid black;
     margin-bottom: 10px;
 }
 
 .modal button[type="submit"] {
-    background-color: #2196F3;
+    background-color: #00778B;
     color: #fff;
     border: none;
     border-radius: 5px;
