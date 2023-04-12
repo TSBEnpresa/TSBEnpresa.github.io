@@ -22,7 +22,7 @@
 
 
 </head>
-<body>
+<body onload="datuakJaso()">
 
 <!-- login MODAL LEHIOA IREKITZEN -->
 <div class="modal-container">
@@ -31,7 +31,7 @@
       <form id="myForm" method="POST">
         <label for="izena">Izen Abizena:</label>
         <input type="text" id="izenAbizena" name="izena" placeholder="Ander Ibañez..." required>
-        <button class="submit" type="submit" id="submit">Bidali</button>
+        <button class="submit" type="submit" id="submit" onclick="datuakBistaratu()">Bidali</button>
         <button class="itxi" onclick="hideModal()">Itxi</button>
       </form>
     </div>
@@ -51,7 +51,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name"><p id="nombre"></p></span>
+                    <span class="name"><p id="bistaratu"></p></span>
                     <span class="profession">ONGI ETORRI!</span>
                 </div>
             </div>

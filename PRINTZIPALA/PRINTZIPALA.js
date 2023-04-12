@@ -49,6 +49,71 @@ function toggleMenu() {
   function hideModal() {
     modalContainer.style.display = 'none';
     modal.style.display = 'none';
+    redirigirIndex();
   }
+
+  function redirigirIndex() {
+    // Redirigir a index.html#
+    window.location.href = "index.html";
+}
   
   closeBtn.addEventListener('click', hideModal);
+
+
+
+
+
+  //Datuak bidaltzeko
+  /*function datuakBidali() {
+
+    alert("Datuak bidali dira.");
+
+    event.preventDefault(); // detener la acción predeterminada del formulario
+    // Capturar los valores de los campos de entrada
+    var nombre = document.getElementById("inputIzena").value;
+    /*var correo = document.getElementById("inputEmail4").value;
+    var texto = document.getElementById("inputTextua").value;
+    var edadetua = document.getElementById("gridCheck").checked;
+
+    // Guardar los valores capturados en localStorage
+    localStorage.setItem("nombre", nombre);
+    localStorage.setItem("correo", correo);
+    localStorage.setItem("texto", texto);
+    localStorage.setItem("edadetua", edadetua);
+
+    // Cerrar la ventana modal
+    document.getElementById("exampleModal").style.display = "none";
+
+    // Redirigir a la página donde se mostrarán los datos
+    window.location.href = "index.html";
+  }*/
+
+
+  //Datuak jaso web orri bertan
+  function datuakBistaratu() {
+    
+    //izena gordetzeko parametroak
+    var izena = document.getElementById("pertsonaIzena").value;
+
+    //Gordetako izena bistaratu.
+    var bistaratu = document.getElementById("bistaratu");
+    bistaratu.innerHTML = izena;
+
+  }
+
+
+//Datuak jasotzeko
+  /*function datuakJaso() {
+
+    // Obtener los valores almacenados en localStorage
+    var nombre = localStorage.getItem("nombre");
+    var correo = localStorage.getItem("correo");
+    var texto = localStorage.getItem("texto");
+    var edadetua = localStorage.getItem("edadetua");
+
+    // Mostrar los valores recuperados en la página
+    document.getElementById("pertsonaIzena").innerHTML = nombre;
+    document.getElementById("correoPersona").innerHTML = "Korreoa: " + correo;
+    document.getElementById("textoPersona").innerHTML = "Textua: " + texto;
+    document.getElementById("edadetuaPersona").innerHTML = "Edadetua nahiz: " + (edadetua == "true" ? "Bai" : "Ez");
+}*/
