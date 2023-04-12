@@ -28,55 +28,27 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
 
-function orriaKargatu(){
 
-    RecibirDatos();
-    
-
-}
-
-function RecibirDatos() {
-
-    // Obtener los valores almacenados en localStorage
-    var nombre = localStorage.getItem("nombre");
-    var email = localStorage.getItem("correo");
-
-    // Mostrar los valores recuperados en la página
-    document.getElementById("nombrePersona").innerHTML = nombre;
-    document.getElementById("correoPersona").innerHTML = email;
-}
-
+/* MOBILAREN MENUA IREKITZEKO */
 function toggleMenu() {
     var menu = document.querySelector('.sidebar');
     menu.classList.toggle('close');
 
 }
 
-/*function autoCloseMenu() {
-  setTimeout(function() {
-    // Cierra el menú después de 5 segundos
-    toggleMenu();
-  }, 5000);
-}*/
 
-/* LOGIN MODALA IREKITZEN */
-function LoginOpenModal() {
-    const modalContainer = document.querySelector('.login');
-    modalContainer.style.display = 'block';
-}
-
-function LoginCloseModal() {
-    const modalContainer = document.querySelector('.login');
+  const modalContainer = document.querySelector('.modal-container');
+  const modal = document.querySelector('.modal');
+  const closeBtn = document.querySelector('.close-btn');
+  
+  function showModal() {
+    modalContainer.style.display = 'flex';
+    modal.style.display = 'block';
+  }
+  
+  function hideModal() {
     modalContainer.style.display = 'none';
-}
-
-/* REGISTER MODALA IREKITZEN */
-function RegisterOpenModal() {
-    const modalContainer = document.querySelector('.register');
-    modalContainer.style.display = 'block';
-}
-
-function RegisterCloseModal() {
-    const modalContainer = document.querySelector('.register');
-    modalContainer.style.display = 'none';
-}
+    modal.style.display = 'none';
+  }
+  
+  closeBtn.addEventListener('click', hideModal);

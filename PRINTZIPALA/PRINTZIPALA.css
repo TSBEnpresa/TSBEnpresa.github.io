@@ -486,6 +486,7 @@ body.dark .home .text{
 }
 
 .modal {
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -530,6 +531,22 @@ body.dark .home .text{
     padding: 10px;
     cursor: pointer;
     margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.itxi{
+
+    background-color: #00778B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+
 }
 
 .close-btn {

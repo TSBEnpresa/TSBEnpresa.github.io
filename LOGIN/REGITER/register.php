@@ -15,7 +15,7 @@ $contraseña = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hashear l
 $query = "INSERT INTO usuarios (email, contraseña) VALUES ('$email', '$contraseña')";
 if (mysqli_query($conexion, $query)) {
   // Redirigir al usuario a la página de inicio después de registrar
-  header("Location: index.html");
+  header("../index.html");
 } else {
   echo "Error al registrar el usuario: " . mysqli_error($conexion);
 }
