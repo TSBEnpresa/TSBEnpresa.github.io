@@ -39,6 +39,12 @@ function toggleMenu() {
 // Obtén el valor almacenado en localStorage
 var izenaBistaratu = localStorage.getItem("izenaGorde");
 
+if (izenaBistaratu == null) {
+
+  izenaBistaratu = "Erabiltzailea";
+  
+}
+
 document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
 
 
