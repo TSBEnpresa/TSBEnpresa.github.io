@@ -36,16 +36,32 @@ function toggleMenu() {
 }
 
 
-// Obtén el valor almacenado en localStorage
-var izenaBistaratu = localStorage.getItem("izenaGorde");
+function erabiltzaileaKargatu(){
+  
+  // Obtén el valor almacenado en localStorage
+  var izenaBistaratu = localStorage.getItem("izenaGorde");
+  
+  if(izenaBistaratu == null){
 
-if (izenaBistaratu == null) {
+    izenaBistaratu = "Erabiltzailea";
+
+  }
+
+  document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+
+}
+
+function erabiltzaileIrten() {
+
+  localStorage.clear();
 
   izenaBistaratu = "Erabiltzailea";
+
+  document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
   
 }
 
-document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+
 
 
 /*
