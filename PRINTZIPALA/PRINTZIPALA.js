@@ -28,7 +28,6 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
 
-
 /* MOBILAREN MENUA IREKITZEKO */
 function toggleMenu() {
     var menu = document.querySelector('.sidebar');
@@ -37,6 +36,13 @@ function toggleMenu() {
 }
 
 
+// Obtén el valor almacenado en localStorage
+var izenaBistaratu = localStorage.getItem("izenaGorde");
+
+document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+
+
+/*
   const modalContainer = document.querySelector('.modal-container');
   const modal = document.querySelector('.modal');
   const closeBtn = document.querySelector('.close-btn');
@@ -88,7 +94,7 @@ function toggleMenu() {
     window.location.href = "index.html";
   }*/
 
-
+/*
   //Datuak jaso web orri bertan
   function datuakBistaratu() {
     
@@ -99,7 +105,7 @@ function toggleMenu() {
     var bistaratu = document.getElementById("bistaratu");
     bistaratu.innerHTML = izena;
 
-  }
+  }*/
 
 
 //Datuak jasotzeko

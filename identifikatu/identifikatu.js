@@ -4,21 +4,20 @@ function enviarDatos() {
     event.preventDefault(); 
 
     // Capturar los valores de los campos de entrada
-    var nombre = document.getElementById("inputIzena").value;
-    var email = document.getElementById("inputEmail").value;
-
-    if (nombre == "") {
+    var izena = document.getElementById("inputIzena").value;
+    
+    if (izena == "") {
         
-        nombre = "Anonimoa";
+        izena = "Erabiltzailea";
 
     }
 
     // Guardar los valores capturados en localStorage
-    localStorage.setItem("nombre", nombre);
-    localStorage.setItem("email", email);
+    localStorage.setItem("izenaGorde", izena);
 
+        
     // Redirigir a la página donde se mostrarán los datos
-    window.location.href = "../PRINTZIPALA/PRINTZIPALA.html";
+    window.location.href = "../index.html";
 }
 
 function validarFormulario() {
@@ -40,3 +39,4 @@ function validarFormulario() {
 
     return valid;
 }
+

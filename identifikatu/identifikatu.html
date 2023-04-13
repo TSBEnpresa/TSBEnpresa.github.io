@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <!-- CSS dokumentua -->
-    <link rel="stylesheet" href="Hasiera.css">
+    <link rel="stylesheet" href="identifikatu.css">
 
     <!-- GOOGLE FONTs -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -32,25 +32,17 @@
     
     <div class="content">
 
-        <h1 class="logo" style="color: #0b1116;">Hasiera <span>menua</span></h1>
+        <h1 class="logo" style="color: #0b1116;">TSB <span>IDENTIFIKATU</span></h1>
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
                 
-                <h3>HASIERA MENUA</h3>
-                <p> 
-                    Bete itzazu hurrengo datuak, robot bat ez zarela konprobatzeko
-                    (Datorik ez dugu gordeko, hemen sartutako guztia zuk bakarrik ikusi dezakezu).
-                </p>
-                
+                <h3>IDENTIFIKATU</h3>
+    
                 <form action="" onsubmit="return validarFormulario()">
-                    <p>
-                        <label>IzenAbizena</label>
-                        <input class="required" type="text" name="fullname" id="inputIzena" placeholder="Ander Ibañez..." required>
-                    </p>
-                    <p>
-                        <label>Korreoa</label>
-                        <input type="email" name="email" id="inputEmail" placeholder="kontaktua@tsb.com" required>
+                    <p class="block">
+                        <label>Erabiltzaile izena</label>
+                        <input class="required" type="text" name="fullname" id="inputIzena" placeholder="Erabiltzailea" required>
                     </p>
                     <!--<p>
                         <label>Telefono Zenbakia</label>
@@ -60,15 +52,15 @@
                         <label>Affair</label>
                         <input type="text" name="affair">
                     </p>-->
+
                     <p class="block">
-                       <label>Extra</label> 
-                        <textarea name="message" rows="2" placeholder="Zerbait guri iristea nahi baduzu, hemen sartu..."></textarea>
+                       <label>Captch-a bete</label> 
+                        <!-- Hemen sartuko dut robotaren konprobazioa -->
+                        <div class="h-captcha" data-sitekey="6fbafa1e-757b-4af9-9084-fd228050fde4"></div>
                     </p>
 
-                    <!--<div class="h-captcha" data-sitekey="3582ba5b-c88d-4b67-a871-483b95e772cf"></div>-->
-
                     <p class="block">
-                        <button type="submit">
+                        <button type="submit" id="webOrriraSartuBtn">
                             WEB ORRIRA SARTU
                         </button>
                     </p>
@@ -90,7 +82,7 @@
     </div>
 
     <!--Kontaktuaren Script-a-->
-    <script src="Hasiera.js"></script>
+    <script src="identifikatu.js"></script>
 
     <!-- BOOTSTRAP Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
