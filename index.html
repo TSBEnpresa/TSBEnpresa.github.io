@@ -8,13 +8,16 @@
 	<title>TSB | Hasiera</title>
 
     <!-- BOOTSTRAP Link -->
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- LEHIOAREN IRUDIA -->
     <link rel="shortcut icon" href="irudiak/LOGO.png" />
 	
     <!-- CSS -->
     <link rel="stylesheet" href="PRINTZIPALA/PRINTZIPALA.css">
+
+    <!-- mugikorraren menurako -->
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     
     <!----===== MENUAREN IKONOAK ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -23,88 +26,66 @@
 </head>
 <body onload="erabiltzaileaKargatu()">
 
-<!-- login MODAL LEHIOA IREKITZEN -->  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
     <!-- Agregar el botón para dispositivos móviles -->
-    <button class="toggle-button" onclick="toggleMenu()">
+    <!--<button class="toggle-button" onclick="toggleMenu()">
         <i class="bx bx-menu"></i>
-    </button>
+    </button>-->
 
 <!-- Menuaren hasiera -->
-    <nav class="sidebar close">
+    <nav class="tsb-sidebar close">
         <header>
-            <div class="image-text">
-                <span class="image">
+            <div class="irudia-textua">
+                <span class="irudia">
                     <img src="irudiak/LOGO.png" alt="">
                 </span>
 
-                <div class="text logo-text">
-                    <span class="name"><p id="izenaBistaratu"></p></span>
-                    <span class="profession">ONGI ETORRI!</span>
+                <div class="textua logo-textua">
+                    <span class="izena"><p id="izenaBistaratu"></p></span>
+                    <span class="ongiEtorria">ONGI ETORRI!</span>
                 </div>
             </div>
 
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-        <div class="menu-bar">
-            <div class="menu">
+        <div class="tsb-menu-bar">
+            <div class="tsb-menu">
 
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Bilatu...">
                 </li>
 
-                <ul class="menu-links">
-                    <li class="nav-link">
+                <ul class="tsb-menu-links">
+                    <li class="tsb-nav-link">
                         <a href="#">
                             <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Hasiera</span>
+                            <span class="textua nav-text">Hasiera</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="tsb-nav-link">
                         <a href="#">
                             <i class='bx bx-window icon' ></i>
-                            <span class="text nav-text">Aplikazioak</span>
+                            <span class="textua nav-text">Aplikazioak</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="tsb-nav-link">
                         <a href="#">
 							<i class='bx bxs-face icon'></i>
-                            <span class="text nav-text">Gure Burua</span>
+                            <span class="textua nav-text">Gure Burua</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="tsb-nav-link">
                         <a href="#">
                             <i class='bx bxs-contact icon' ></i>
-                            <span class="text nav-text">Kontaktua</span>
+                            <span class="textua nav-text">Kontaktua</span>
                         </a>
                     </li>
 
-                    <!--<li class="nav-link">
+                    <!--<li class="tsb-nav-link">
                         <a href="#">
                             <i class='bx bx-heart icon' ></i>
                             <span class="text nav-text">Likes</span>
@@ -118,7 +99,7 @@
                 <li class="">
                     <a href="identifikatu/identifikatu.html" id="identifikatuBtn">
                         <i class='bx bx-user icon'></i>
-                        <span class="text nav-text">Identifikatu</span>
+                        <span class="textua nav-text">Identifikatu</span>
                     </a>
                 </li>
 
@@ -126,7 +107,7 @@
                 <li class="">
                     <a href="#">
                         <i class='bx bx-message-dots icon'></i>
-                        <span class="text nav-text">EUS | ENG</span>
+                        <span class="textua nav-text">EUS | ENG</span>
                     </a>
                 </li>
 
@@ -135,18 +116,25 @@
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
-                    <span class="mode-text text">Modu iluna</span>
+                    <span class="mode-text textua">Modu iluna</span>
 
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
                 </li>
-            <center>
+            <!--<div class="bottom-content">
+                <li class="">
+                    <a href="identifikatu/identifikatu.html" id="identifikatuBtn">
+                        <i class='bx bx-user icon'></i>
+                        <span class="text nav-text">Identifikatu</span>
+                    </a>
+                </li>-->
+                <center>
                 <div class="bottom-content" style="width: 62px;">
                     <li class="">
                         <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
                             <i class='bx bx-log-out icon'></i>
-                            <span class="text nav-text"></span>
+                            <span class="textua nav-text"></span>
                         </a>
                     </li>
                 </center>
@@ -157,8 +145,15 @@
     </nav>
 <!-- Menuaren bukaera -->
 
-    <section class="home">
-        <div class="text">Hasiera Orria</div>
+    <section class="home home_movil">
+        <div class="textua tx_movil">Hasiera Orria</div>
+
+    <!-- Mugikorraren menua -->
+    
+    
+
+    <!-- Mugikorraren menuaren bukaera -->
+
     </section>
 
 	<!-- Script-aren link-a -->

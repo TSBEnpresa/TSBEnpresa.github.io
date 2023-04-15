@@ -48,7 +48,7 @@ body.dark{
 }
 
 /* ===== Sidebar ===== */
- .sidebar{
+ .tsb-sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -59,12 +59,12 @@ body.dark{
     transition: var(--tran-05);
     z-index: 100;  
 }
-.sidebar.close{
+.tsb-sidebar.close{
     width: 88px;
 }
 
 /* ===== Reusable code - Here ===== */
-.sidebar li{
+.tsb-sidebar li{
     height: 50px;
     list-style: none;
     display: flex;
@@ -72,13 +72,13 @@ body.dark{
     margin-top: 10px;
 }
 
-.sidebar header .image,
-.sidebar .icon{
+.tsb-sidebar header .irudia,
+.tsb-sidebar .icon{
     min-width: 60px;
     border-radius: 6px;
 }
 
-.sidebar .icon{
+.tsb-sidebar .icon{
     min-width: 60px;
     border-radius: 6px;
     height: 100%;
@@ -88,59 +88,60 @@ body.dark{
     font-size: 20px;
 }
 
-.sidebar .text,
-.sidebar .icon{
+.tsb-sidebar .textua,
+.tsb-sidebar .icon{
     color: var(--text-color);
     transition: var(--tran-03);
 }
 
-.sidebar .text{
+.tsb-sidebar .textua{
     font-size: 17px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
 }
-.sidebar.close .text{
+.tsb-sidebar.close .textua{
     opacity: 0;
 }
 /* =========================== */
 
-.sidebar header{
+.tsb-sidebar header{
     position: relative;
 }
 
-.sidebar header .image-text{
+.tsb-sidebar header .irudia-textua{
     display: flex;
     align-items: center;
 }
-.sidebar header .logo-text{
+.tsb-sidebar header .logo-textua{
     display: flex;
     flex-direction: column;
 }
-header .image-text .name {
+header .irudia-textua .izena {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
+    height: 25px;
 }
 
-header .image-text .profession{
+header .irudia-textua .ongiEtorria{
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar header .image{
+.tsb-sidebar header .irudia{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .image img{
+.tsb-sidebar header .irudia img{
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.tsb-sidebar header .toggle{
     position: absolute;
     top: 50%;
     right: -25px;
@@ -158,26 +159,26 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 
-body.dark .sidebar header .toggle{
+body.dark .tsb-sidebar header .toggle{
     color: var(--text-color);
 }
 
-.sidebar.close .toggle{
+.tsb-sidebar.close .toggle{
     transform: translateY(-50%) rotate(0deg);
 }
 
-.sidebar .menu{
+.tsb-sidebar .tsb-menu{
     margin-top: 40px;
 }
 
-.sidebar li.search-box{
+.tsb-sidebar li.search-box{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     cursor: pointer;
     transition: var(--tran-05);
 }
 
-.sidebar li.search-box input{
+.tsb-sidebar li.search-box input{
     height: 100%;
     width: 100%;
     outline: none;
@@ -189,7 +190,7 @@ body.dark .sidebar header .toggle{
     font-weight: 500;
     transition: var(--tran-05);
 }
-.sidebar li a{
+.tsb-sidebar li a{
     list-style: none;
     height: 100%;
     background-color: transparent;
@@ -202,36 +203,36 @@ body.dark .sidebar header .toggle{
     transition: var(--tran-03);
 }
 
-.sidebar li a:hover{
+.tsb-sidebar li a:hover{
     background-color: var(--primary-color);
 }
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text{
+.tsb-sidebar li a:hover .icon,
+.tsb-sidebar li a:hover .textua{
     color: var(--sidebar-color);
 }
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
+body.dark .tsb-sidebar li a:hover .icon,
+body.dark .tsb-sidebar li a:hover .textua{
     color: var(--text-color);
 }
 
-.sidebar .menu-bar{
+.tsb-sidebar .tsb-menu-bar{
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
 }
-.menu-bar::-webkit-scrollbar{
+.tsb-menu-bar::-webkit-scrollbar{
     display: none;
 }
-.sidebar .menu-bar .mode{
+.tsb-sidebar .tsb-menu-bar .mode{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
     transition: var(--tran-05);
 }
 
-.menu-bar .mode .sun-moon{
+.tsb-menu-bar .mode .sun-moon{
     height: 50px;
     width: 60px;
 }
@@ -249,7 +250,7 @@ body.dark .mode .sun-moon i.moon{
     opacity: 0;
 }
 
-.menu-bar .bottom-content .toggle-switch{
+.tsb-menu-bar .bottom-content .toggle-switch{
     position: absolute;
     right: 0;
     height: 100%;
@@ -296,19 +297,19 @@ body.dark .switch::before{
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
-.home .text{
+.home .textua{
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
+.tsb-sidebar.close ~ .home{
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
 }
-body.dark .home .text{
+body.dark .home .textua{
     color: var(--text-color);
 }
 
@@ -316,137 +317,8 @@ body.dark .home .text{
 @media screen and (max-width: 600px) {
     /* Cambios en el menú para vistas móviles */
 
-    .menu-bar .bottom-content .toggle-switch{
-        position: absolute;
-        right: 0;
-        height: 100%;
-        min-width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-    
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      z-index: 1;
-      background-color: var(--sidebar-color);
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .sidebar header {
-      background-color: var(--sidebar-color);
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    .sidebar header .toggle {
-      display: block;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-color);
-      opacity: 0;
-      transition: var(--tran-03);
-    }
-  
-    .sidebar .menu-bar {
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-  
-    .sidebar .menu {
-      width: 100%;
-      padding: 0 1.5rem;
-    }
-  
-    .sidebar .menu li {
-      list-style: none;
-      margin: 0.5rem 0;
-      transition: var(--tran-03);
-    }
-  
-    .sidebar .menu a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: var(--tran-03);
-    }
-  
-    .sidebar .menu a:hover {
-      color: var(--primary-color);
-    }
-  
-    .sidebar .menu i {
-      font-size: 1.25rem;
-      margin-right: 0.5rem;
-    }
-  
-    .sidebar .menu .text {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-  
-    .sidebar .menu .search-box {
-      margin-bottom: 1rem;
-      position: relative;
-    }
-  
-    .sidebar .menu .search-box input {
-      width: 100%;
-      padding: 0.5rem 2rem;
-      border: none;
-      border-radius: 2rem;
-      background-color: var(--primary-color-light);
-      color: var(--text-color);
-      transition: var(--tran-03);
-    }
-  
-    .sidebar .menu .search-box input:focus {
-      outline: none;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-  
-    .sidebar .menu .search-box .icon {
-      position: absolute;
-      top: 50%;
-      left: 1rem;
-      transform: translateY(-50%);
-      font-size: 0rem;
-      color: var(--text-color);
-    }
-  
-    .sidebar .bottom-content {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: right;
-      padding: 1.5rem;
-    }
-  
-    .sidebar .bottom-content li {
-      list-style: none;
-      margin: 0.5rem 0;
-      transition: var(--tran-03);
-    }
-  
-    .sidebar.close {
-      transform: translateY(-100%);
+    .tsb-sidebar.close{
+        width: 0px;
     }
 
     
@@ -456,104 +328,35 @@ body.dark .home .text{
     display: none;
 }
 
-/* Estilos para el botón en dispositivos móviles */
-@media only screen and (max-width: 601px) {
-    .toggle-button {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 2px;
-        z-index: 9999;
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+   
+    #tx_movil {
+
+        padding-right: 0px;
+        padding-left: 0px;
+
     }
 
-    #bx-search ::before{
+    #home_movil {
 
+        left: 0;
+        position: 0;
+        width: 100%;
+
+    }
+
+    .home .textua{
+        padding: 12px 0px;
+    }
+
+    .tsb-sidebar.close ~ .home{
+       left: 40px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tsb-sidebar.close img{
         opacity: 0;
-
-    }
-}
-
-/* HASIERAKO MODAL LEHIOA */
-.modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-}
-
-.modal {
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.modal h2 {
-    margin-top: 1;
-}
-
-.modal form {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal label {
-    margin-top: 10px;
-}
-
-.modal input {
-    padding: 5px;
-    border-radius: 5px;
-    border: 0.5px solid black;
-    margin-bottom: 10px;
-}
-
-.modal button[type="submit"] {
-    background-color: #00778B;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.itxi{
-
-    background-color: #00778B;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+     }
 }
