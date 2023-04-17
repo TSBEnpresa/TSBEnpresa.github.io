@@ -28,14 +28,6 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
 
-/* MOBILAREN MENUA IREKITZEKO */
-function toggleMenu() {
-    var menu = document.querySelector('.sidebar');
-    menu.classList.toggle('close');
-
-}
-
-
 function erabiltzaileaKargatu(){
   
   // Obtén el valor almacenado en localStorage
@@ -58,91 +50,85 @@ function erabiltzaileIrten() {
   izenaBistaratu = "Erabiltzailea";
 
   document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+
+  location.reload();
   
 }
 
-//MENUA
 
 
+// Con este codigo lo que hago es, que el video de la pagina principal, se reproduzca al pasar por encima,
+// Pero al quitarlo de la pantalla, se pause y si te alejas mucho, se reinicie por completo.
 
-/*
-  const modalContainer = document.querySelector('.modal-container');
-  const modal = document.querySelector('.modal');
-  const closeBtn = document.querySelector('.close-btn');
-  
-  function showModal() {
-    modalContainer.style.display = 'flex';
-    modal.style.display = 'block';
-  }
-  
-  function hideModal() {
-    modalContainer.style.display = 'none';
-    modal.style.display = 'none';
-    redirigirIndex();
-  }
+/*var vid = document.getElementById("bideoScroll");
+var playing = false;
 
-  function redirigirIndex() {
-    // Redirigir a index.html#
-    window.location.href = "index.html";
+function getCurTime() { 
+  alert(vid.currentTime);
+} 
+
+function setCurTime() { 
+  vid.currentTime=5;
+} 
+
+function playVideo() {
+  vid.play();
+  playing = true;
 }
-  
-  closeBtn.addEventListener('click', hideModal);
+
+function pauseVideo() {
+  vid.pause();
+  playing = false;
+}
+
+window.addEventListener('scroll', function() {
+  if (playing) {
+    if (window.scrollY >= vid.offsetTop + vid.offsetHeight || window.scrollY + window.innerHeight <= vid.offsetTop) {
+      pauseVideo();
+    }
+  } else {
+    if (window.scrollY < vid.offsetTop + vid.offsetHeight && window.scrollY + window.innerHeight > vid.offsetTop) {
+      playVideo();
+    }
+  }
+});*/
 
 
 
+// Al hacer scroll en la pagina, el video se ira reproduciendo, de momento lo dejo desactivado, ya que el video se queda en "position: fixed;"
+// Y mi intencion es, que cuando acabe el video, la "position" se cambie, para poder seguir navegando tranquilamente.
 
+/*var vid = document.getElementById("bideoScroll");
+var playing = false; 
 
-  //Datuak bidaltzeko
-  /*function datuakBidali() {
+function playVideo() {
+  vid.play();
+  playing = true;
+}
 
-    alert("Datuak bidali dira.");
+function pauseVideo() {
+  vid.pause();
+  playing = false;
+}
 
-    event.preventDefault(); // detener la acción predeterminada del formulario
-    // Capturar los valores de los campos de entrada
-    var nombre = document.getElementById("inputIzena").value;
-    /*var correo = document.getElementById("inputEmail4").value;
-    var texto = document.getElementById("inputTextua").value;
-    var edadetua = document.getElementById("gridCheck").checked;
+window.addEventListener('scroll', function() {
+  var position = window.scrollY / window.innerHeight  ;
+  vid.currentTime = position;
+});
 
-    // Guardar los valores capturados en localStorage
-    localStorage.setItem("nombre", nombre);
-    localStorage.setItem("correo", correo);
-    localStorage.setItem("texto", texto);
-    localStorage.setItem("edadetua", edadetua);
+var video = document.querySelector('.bideoa');
+var videoContainer = document.querySelector('.video-container');
 
-    // Cerrar la ventana modal
-    document.getElementById("exampleModal").style.display = "none";
+// Comprueba la posición del video cada segundo
+var checkVideoPosition = setInterval(function() {
+  if (video.currentTime >= 20) {
+    // Cambia la posición del video a "position: absolute;"
+    videoContainer.style.position = 'absolute';
+    clearInterval(checkVideoPosition);
+  }
+}, 1000);
 
-    // Redirigir a la página donde se mostrarán los datos
-    window.location.href = "index.html";
-  }*/
-
-/*
-  //Datuak jaso web orri bertan
-  function datuakBistaratu() {
-    
-    //izena gordetzeko parametroak
-    var izena = document.getElementById("pertsonaIzena").value;
-
-    //Gordetako izena bistaratu.
-    var bistaratu = document.getElementById("bistaratu");
-    bistaratu.innerHTML = izena;
-
-  }*/
-
-
-//Datuak jasotzeko
-  /*function datuakJaso() {
-
-    // Obtener los valores almacenados en localStorage
-    var nombre = localStorage.getItem("nombre");
-    var correo = localStorage.getItem("correo");
-    var texto = localStorage.getItem("texto");
-    var edadetua = localStorage.getItem("edadetua");
-
-    // Mostrar los valores recuperados en la página
-    document.getElementById("pertsonaIzena").innerHTML = nombre;
-    document.getElementById("correoPersona").innerHTML = "Korreoa: " + correo;
-    document.getElementById("textoPersona").innerHTML = "Textua: " + texto;
-    document.getElementById("edadetuaPersona").innerHTML = "Edadetua nahiz: " + (edadetua == "true" ? "Bai" : "Ez");
-}*/
+// Cambia la posición del video a "position: absolute;" cuando termina de reproducirse
+video.addEventListener('ended', function() {
+  videoContainer.style.position = 'absolute';
+});*/

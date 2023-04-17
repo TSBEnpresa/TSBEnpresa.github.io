@@ -312,7 +312,7 @@ body.dark .switch::before{
 }
 
 .tsb-sidebar.close ~ .home{
-    left: 100px;
+    left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
 }
@@ -347,7 +347,7 @@ body.dark .home .textua{
 
     #home_movil {
 
-        left: 0px;
+        left: 0;
         position: 0;
         width: 100%;
 
@@ -358,8 +358,8 @@ body.dark .home .textua{
     }
 
     .tsb-sidebar.close ~ .home{
-       left: 40px;
-        width: 90%;
+       left: 45px;
+        width: 100%;
         height: 100%;
     }
 
@@ -368,11 +368,10 @@ body.dark .home .textua{
      }
 }
 
-/*.bideoa {
+.banner{
+
     position: relative;
-    top: 50px;
-    width: 90%;
-    height: 90%;
-    border: 1px solid #00778B;
-    border-radius: 100px;
-}*/
+    width: 100%;
+    height: 100%;
+
+}
