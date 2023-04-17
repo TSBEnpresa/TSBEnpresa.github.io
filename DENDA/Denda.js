@@ -54,12 +54,13 @@ function erabiltzaileIrten() {
   
 }
 
-/* DENDA BARRUKO GALERIA || CAROUSEL 
+/* DENDA BARRUKO GALERIA || CAROUSEL */
 function App() {}
 
 window.onload = function (event) {
     var app = new App();
     window.app = app;
+    erabiltzaileaKargatu();
 };
 
 App.prototype.processingButton = function(event) {
@@ -89,4 +90,4 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
     if(leftPosition < (trackWidth - listWidth)) {
         track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
     }
-}*/
+}
