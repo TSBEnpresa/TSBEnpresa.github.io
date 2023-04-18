@@ -413,10 +413,26 @@ body.dark .home .textua{
 
 
 }
-.kategoriak :hover{
 
-    background-color: #00778B;
+@media only screen and (max-width: 1060px) {
 
+    .kategoriak {
+
+        
+        font-size: 15px;
+
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .kategoriaKaxa {
+
+        margin: 5px;
+
+    }
+    
 }
 
 .barra
@@ -427,17 +443,6 @@ body.dark .home .textua{
     margin-left: 1.5%;
     display: flex;
     background-color: #00778B;
-    padding: 0.05em;
-    border-radius: 15px;
-    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
-  }
-
-.barra1
-{  
-    margin-right: 1.5%;
-    margin-left: 1.5%;
-    display: flex;
-    background: linear-gradient(to right, #00778B, #b3b3b365 );
     padding: 0.05em;
     border-radius: 15px;
     box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
