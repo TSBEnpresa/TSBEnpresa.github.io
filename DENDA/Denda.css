@@ -2,7 +2,7 @@
 
 
 
-/* MENUAREN CSS HASIERA */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -54,7 +54,9 @@ body.dark{
     --text-color: #ccc;
 }
 
-/* ===== Sidebar ===== */
+
+
+/* MENUAREN CSS HASIERA */
  .tsb-sidebar{
     position: fixed;
     top: 0;
@@ -320,22 +322,17 @@ body.dark .home .textua{
     color: var(--text-color);
 }
 
-/* MENUAREN CSS BUKAERA */
 @media screen and (max-width: 600px) {
-    /* Cambios en el menú para vistas móviles */
 
     .tsb-sidebar.close{
         width: 0px;
     }
 
     
-  }
-
-  .toggle-button {
-    display: none;
 }
 
-/* Estilos para dispositivos móviles */
+
+/* MUGIKORREAN MENUA ONDO IKUSTEKO */
 @media only screen and (max-width: 600px) {
    
     #tx_movil {
@@ -367,8 +364,12 @@ body.dark .home .textua{
         opacity: 0;
      }
 
-   
 }
+/* MENUAREN CSS BUKAERA */
+
+
+
+
 
 /* DENDAREN BANNER-A Nola funtzionatuko duen, esango diogu. */
 .banner{
@@ -395,6 +396,8 @@ body.dark .home .textua{
     }
 
 }
+/* DENDAREN BANNER ATALA BUKATUTA */
+
 
 
 
@@ -435,8 +438,12 @@ body.dark .home .textua{
     
 }
 
-.barra
-{  
+/* KATEGORIEN BOTOIAREN DISEINUAren BUKAERA */
+
+
+
+/* WEB ORRI BARRUKO BARRAK */
+.barra{  
     margin-top: 40px;
     margin-bottom: 40px;
     margin-right: 1.5%;
@@ -446,7 +453,10 @@ body.dark .home .textua{
     padding: 0.05em;
     border-radius: 15px;
     box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
-  }
+}
+/* WEB ORRI BARRUKO BARREN BUKAERA */
+
+
   
 
 /* KAROUSELAREN ESTILOA */
@@ -471,7 +481,7 @@ a{
     text-align: center;
 }
 
-/* images */
+/* Karouselaren irudiak */
 
 .slick-list{
     position: relative;
@@ -525,7 +535,7 @@ a{
     opacity: .85;
 }
 
-/* buttons */
+/* KAROUSELAN BOTOIAK */
 
 .slick-arrow{
     border-radius: 30px;
@@ -553,4 +563,8 @@ a{
 .slick-next{
     right: 0px;
 }
+/* KAROUSELAREN ESTILO BUKAERA */
 
+
+
+/* HURRENGO GAUZA */
