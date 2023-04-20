@@ -572,6 +572,12 @@ a{
 
 
 /* PRODUKTUEN ZERRENDA */
+.dendaKartak {
+
+    text-align: center;
+
+}
+
 .dendaKartak h2{
 
     font-weight: bold;
@@ -585,9 +591,10 @@ a{
 
 }
 
-.dendaKartak text{
+.dendaKartak img{
 
-    
+    width: 100%;
+    height: 100%;
 
 }
   
