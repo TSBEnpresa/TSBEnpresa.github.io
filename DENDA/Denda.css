@@ -12,6 +12,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    padding-top: 56px;
+  }
+
 html{
 
     scroll-behavior: smooth;
@@ -567,4 +571,25 @@ a{
 
 
 
-/* HURRENGO GAUZA */
+/* PRODUKTUEN ZERRENDA */
+.dendaKartak h2{
+
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+
+}
+
+.dendaKartak text{
+
+    
+
+}
+  
+
+
