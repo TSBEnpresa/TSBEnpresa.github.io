@@ -462,31 +462,53 @@ fieldset h2{
 
   }
 
+  .forma .col-6{
+
+    margin-top: 8px;
+
+  }
+
   form .bidali{
 
     background-color: #00778B;
     color: white;
     border: 0px;
     border-radius: 5px;
+    margin-bottom: 10px;
+
+  }
+
+  h2{
+
+    margin-top: 20px;
+    margin-bottom: -17px;
 
   }
   
 .forma{
 
-    
+    background-color: white;
 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 .kontaktua{
 
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
     margin-bottom: -5px;
     background-color: #00778B;
     color: white;
-    height: 100;
+    height: 100%;
     width: 97.5%;
 
 }
+
 
   /* WEB ORRI BARRUKO BARRAK */
 .barra{  
@@ -498,4 +520,6 @@ fieldset h2{
     margin-bottom: 0px;
 }
 /* WEB ORRI BARRUKO BARREN BUKAERA */
+
+
 
