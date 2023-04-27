@@ -377,10 +377,16 @@ body.dark .home .textua{
     border-radius: 100px;
 }*/
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     
     .irudiak{
         margin-top: 0px;
+      }
+
+      .centrar{
+
+        flex-direction: column;
+    
       }
 
 }
@@ -548,3 +554,144 @@ body.dark .home .textua{
     box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
 }
 /* WEB ORRI BARRUKO BARREN BUKAERA */
+
+
+.bideoTartea{
+
+    margin-bottom: 45px;
+
+}
+
+.card {
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+  }
+  
+  .card img {
+    float: left;
+  }
+  
+  .card-content {
+    overflow: hidden;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+  }
+  
+  .card-content p {
+    margin-bottom: 10px;
+  }
+  
+  .card-content a {
+    display: block;
+    text-align: right;
+  }
+
+  .centrar{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+  }
+
+  fieldset{
+
+    margin-top: -40px;
+    font-size: 20px;
+    border: solid 1px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
+    background-color: #00778B;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    
+}
+
+  .ordutegia{
+    margin-top: 13px;
+    margin-left: 20px;
+    }
+    
+    .ordutegiDuda{
+    
+        margin-top: 35px;
+        margin-left: 20px;
+    
+    }
+    
+@media (max-width: 1471px){
+    
+    .ordutegiDuda{
+    
+        margin-top: 0px;
+        
+    }
+    
+}
+
+/* FOOTERRA */
+
+.footer-basic {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:40px 20%;
+    background-color:#00778B;
+    color:white;
+    margin-left: -12px;
+    margin-right: 0px;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    text-align:center;
+    font-size:18px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid white;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:white;
+  }
+  
