@@ -55,6 +55,18 @@ function erabiltzaileIrten() {
   
 }
 
+var video = document.getElementById('mi-video');
+
+window.addEventListener('scroll', function() {
+  var videoPosition = video.getBoundingClientRect();
+
+  if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
 
 
 // Con este codigo lo que hago es, que el video de la pagina principal, se reproduzca al pasar por encima,
