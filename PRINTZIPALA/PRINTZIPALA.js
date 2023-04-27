@@ -45,13 +45,29 @@ function erabiltzaileaKargatu(){
 
 function erabiltzaileIrten() {
 
-  localStorage.clear();
+  var izenaBistaratu = localStorage.getItem("izenaGorde");
 
-  izenaBistaratu = "Erabiltzailea";
+  var erantzuna = confirm(izenaBistaratu + ", sesioa ixtea nahi duzu?");
 
-  document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+  if (erantzuna == true) {
 
-  location.reload();
+    alert("Sesioa ixten...")
+
+    localStorage.clear();
+
+    izenaBistaratu = "Erabiltzailea";
+  
+    document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+  
+    location.reload();
+
+  }else{
+
+    alert("Sesioa ez ixtea erabaki duzu.")
+
+  }
+
+
   
 }
 
