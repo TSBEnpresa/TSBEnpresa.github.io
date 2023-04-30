@@ -85,12 +85,28 @@ function erabiltzaileaKargatu(){
 
 function erabiltzaileIrten() {
 
-  localStorage.clear();
-
-  izenaBistaratu = "Erabiltzailea";
-
-  document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
-
-  location.reload();
+    var izenaBistaratu = localStorage.getItem("izenaGorde");
   
-}
+    var erantzuna = confirm(izenaBistaratu + ", sesioa ixtea nahi duzu?");
+  
+    if (erantzuna == true) {
+  
+      alert("Sesioa ixten...")
+  
+      localStorage.clear();
+  
+      izenaBistaratu = "Erabiltzailea";
+    
+      document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+    
+      location.reload();
+  
+    }else{
+  
+      alert("Sesioa ez ixtea erabaki duzu.")
+  
+    }
+  
+  
+    
+  }
