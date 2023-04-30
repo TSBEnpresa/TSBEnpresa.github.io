@@ -640,8 +640,32 @@ a{
     margin-right: 10px;
     margin-left: 10px;
 
-    text-align: justify;
+}
 
+.barrukoText{
+
+    font-size: 15px;
+    
+
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .textua{
+   
+        text-align: justify;
+    
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .textua{
+
+        margin-right: 100px;
+
+    }
+    
 }
 
 

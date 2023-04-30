@@ -556,6 +556,22 @@ body.dark .home .textua{
 /* WEB ORRI BARRUKO BARREN BUKAERA */
 
 
+.barrukoText{
+
+    font-size: 15px;
+    
+
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .barrukoText{
+
+        text-align: justify;
+    
+    }
+}
+
 .bideoTartea{
 
     margin-bottom: 45px;
