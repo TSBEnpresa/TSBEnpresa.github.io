@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>TSB | Hasiera</title>
+
+    <!-- BOOTSTRAP Link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- LEHIOAREN IRUDIA -->
+    <link rel="shortcut icon" href="../irudiak/LOGO.png" />
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="aplikazioak.css">
+    
+    <!-- MENUAREN IKONOAK -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    
+
+    <!-- JQuery bideoko efektuentzako
+    <script defer src="jquery-3.2.1.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" type="text"></script> -->
+
+</head>
+<body onload="erabiltzaileaKargatu()">
+    
+    <!-- MENUAREN HASIERA, menu hau web orriaren menu printzipala da,
+        azkenean beti eskura edukiko dugun menua da -->
+        <nav class="tsb-sidebar close">
+            <header>
+                <div class="irudia-textua">
+                    <span class="irudia">
+                        <img src="../irudiak/LOGO.png" alt="">
+                    </span>
+
+                    <div class="textua logo-textua">
+                        <span class="izena"><p id="izenaBistaratu"></p></span>
+                        <span class="ongiEtorria">ONGI ETORRI!</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="tsb-menu-bar">
+                <div class="tsb-menu">
+
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Bilatu...">
+                    </li>
+
+                    <ul class="tsb-menu-links">
+                        <li class="tsb-nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="textua nav-text">Hasiera</span>
+                            </a>
+                        </li>
+
+                        <li class="tsb-nav-link">
+                            <a href="aplikazioak.html">
+                                <i class='bx bx-window icon' ></i>
+                                <span class="textua nav-text">Aplikazioak</span>
+                            </a>
+                        </li>
+
+                        <li class="tsb-nav-link">
+                            <a href="../DENDA/Denda.html">
+                                <i class='bx bx-shopping-bag icon'></i>
+                                <span class="textua nav-text">Denda</span>
+                            </a>
+                        </li>
+
+                        <li class="tsb-nav-link">
+                            <a href="../KONTAKTUA/KONTAKTUA.html">
+                                <i class='bx bxs-contact icon' ></i>
+                                <span class="textua nav-text">Kontaktua</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="../identifikatu/identifikatu.html" id="identifikatuBtn">
+                            <i class='bx bx-user icon'></i>
+                            <span class="textua nav-text">Identifikatu</span>
+                        </a>
+                    </li>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="textua nav-text">EUS | ENG</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text textua">Modu iluna</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+
+                    <center>
+                    <div class="bottom-content" style="width: 62px;">
+                        <li class="">
+                            <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
+                                <i class='bx bx-log-out icon'></i>
+                                <span class="textua nav-text"></span>
+                            </a>
+                        </li>
+                    </center>
+                    
+                </div>
+            </div>
+
+        </nav>
+    <!-- Menuaren bukaera -->
+
+    <!-- WEB ORRIAREN HASIERA -->
+        <section class="home home_movil">
+
+            <div class="col-12 fleft">
+                <div class="textua tx_movil">
+
+                    <h2 style="margin-top: 15px; font-weight: bold; display: flex; justify-content: center;">
+                        INBENTARIOA GESTIONATZEKO APLIKAZIOA
+                    </h2>
+
+                </div>
+            </div>
+            
+
+            <div class="col-12 fleft">
+                <div class="col-12 col-xl-6 fleft mt-0">
+                    <div class="slide">
+                        <div class="slide-inner">
+                            <input class="slide-open" type="radio" id="slide-1" 
+                                name="slide" aria-hidden="true" hidden="" checked="checked">
+                            <div class="slide-item">
+                                <img src="../irudiak/EmpresaIrudia.jpg">
+                            </div>
+                            <input class="slide-open" type="radio" id="slide-2" 
+                                name="slide" aria-hidden="true" hidden="">
+                            <div class="slide-item">
+                                <img src="../irudiak/EmpresaBarrutik.jpg">
+                            </div>
+                            <input class="slide-open" type="radio" id="slide-3" 
+                                name="slide" aria-hidden="true" hidden="">
+                            <div class="slide-item">
+                                <img src="../irudiak/EntradaFoto.jpg">
+                            </div>
+                            <label for="slide-3" class="slide-control prev control-1">‹</label>
+                            <label for="slide-2" class="slide-control next control-1">›</label>
+                            <label for="slide-1" class="slide-control prev control-2">‹</label>
+                            <label for="slide-3" class="slide-control next control-2">›</label>
+                            <label for="slide-2" class="slide-control prev control-3">‹</label>
+                            <label for="slide-1" class="slide-control next control-3">›</label>
+                            <ol class="slide-indicador">
+                                <li>
+                                    <label for="slide-1" class="slide-circulo">•</label>
+                                </li>
+                                <li>
+                                    <label for="slide-2" class="slide-circulo">•</label>
+                                </li>
+                                <li>
+                                    <label for="slide-3" class="slide-circulo">•</label>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-xl-6 fleft mt-1">
+                    <div class="textua tx_movil">
+                        
+                        <p class="barrukoText">
+                            
+                            Lehenik eta behin, gure aplikaziora sartzeko bi aukera ditugu. 
+                            Aukera bat administratzailearentzat eta beste aukera bat langile arrunt 
+                            batentzat. Administratzaileak menu bat izango du, horren barruan hiru aukera ditu.
+
+                        </p>
+                        <p class="barrukoText">
+
+                            Lehenengo aukera, gailu bati alta emateko balio du. Honek esan nahi du aplikazioko
+                            datu-basean informatika-gailu berri bat gehitu dezakegula. Aukera hau erabilgarria
+                            da enpresak informatika-gailu berriak erosten dituenean eta gailu horren kontrola 
+                            ematea nahi bada.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="col-12 fleft">
+                <div class="col-12 col-xl-6 fleft mt-01">
+                    
+                    <div class="textua tx_movil">
+        
+                        <p style="margin-top: 15px;" class="barrukoText">
+
+                            Bigarren aukera, gailu bati baja emateko balio du.
+                            Honek esan nahi du aplikazioko datu-basean informatika-gailu bat kendu edo baja eman
+                            dezakezula. Adibidez, gailu batek ez badu funtzionatzen baja emateko aukera izango duzu.
+
+                        </p>
+
+                        <p style="margin-top: 15px;" class="barrukoText">
+
+                            Hirugarren aukerak, datu base barruan ditugun gailu guztiak bistaratzeko 
+                            aukera ematen digu. Honek esan nahi du aplikazioko datu-basean dauden 
+                            informatika-gailu guztien zerrenda ikusi dezakezula.
+
+
+                        </p>
+
+                        <p style="margin-top: 15px;" class="barrukoText">
+
+                            Bestalde, langilea erabiltzailean sartuz gero, datu base barruan
+                            ditugun gailu guztiak bistaratzeko aukera ematen digu soilik.
+
+                        </p>
+        
+                    </div>
+
+                </div>
+        
+                <div class="col-12 col-xl-6 fleft mt-1">
+                    
+                    <div>
+
+                        <video id="mi-video" class="irudiak bideoTartea" src="../bideoak/autoVideo20Sec.mp4"></video>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-12 fleft">
+                <div class="col-12 col-xl-6 fleft mt-0">
+                    
+                    <iframe class="irudiak" width="100%" height="350" src="https://www.youtube.com/embed/X3r3S4iSCTM" allowfullscreen></iframe>
+
+                </div>
+                            
+                <div class="col-12 col-xl-6 fleft mt-1">
+                    <div class="textua tx_movil">
+                        
+                        <p class="barrukoText">
+
+                            Laburbilduz, inbentario aplikazioak, enpresaren informatika gailu guztiak
+                            ondo kudeatuta mantentzeko tresna da. Erabiltzaile desberdinak ditugu barruan.
+                            Administratzaileak, gailuak gehitu, baja eman edo bistaratzeko aukerak ditu,
+                            langileak ordea, bistaratzeko aukera besterik ez du izango.
+
+                        </p>
+
+                        <p class="barrukoText">
+
+                            Hemen duzu inbentario programa eskuratzeko aukera, baita gure eskutik
+                            emandako azalpen txiki bat, programa nola erabiltzen den edo zer egin
+                            dezaken berarekin jakiteko.
+
+                        </p>
+
+                        <div style="background-color: #00778b;  border-radius: 15px;">
+                            <a href="DENDA/Denda.html" style="text-decoration: none;">
+                                <span class="textua nav-text" style="margin-bottom: 10px; margin-top: 30px; font-size: 20px; justify-content: center; display: flex; color: white;">
+                                    PROGRAMA ESKURATU
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTERRA -->
+            <div class="footer-basic">
+                <footer>
+                    <div class="social">
+                        <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
+                    </div>
+                    <ul class="list-inline">
+                        
+                        <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
+                        <li class="list-inline-item"><a href="../">Aplikazioak</a></li>
+                        <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
+                        <li class="list-inline-item"><a href="KONTAKTUA.html">Kontaktua</a></li>
+                    </ul>
+                    <p class="copyright">TSB ENPRESA © 2023</p>
+                </footer>
+            </div>
+
+
+        </section>
+    <!-- WEB ORRIAREN BUKAERA -->
+
+	<!-- JavaScript dokumentuaren link-a -->
+	<script src="aplikazioak.js"></script>
+
+    <!-- BOOTSTRAP eta behar ditudan Script-ak -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
