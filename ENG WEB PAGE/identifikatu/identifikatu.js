@@ -9,7 +9,7 @@ function enviarDatos() {
     // Ez baduzu ezer sartzen edo, sesioa ixten baduzu gertuko dena
     if (izena == "") {
         
-        izena = "Erabiltzailea";
+        izena = "User";
 
     }
 
@@ -17,10 +17,10 @@ function enviarDatos() {
     localStorage.setItem("izenaGorde", izena);
 
     // Mezua irakustea
-    alert("Ongi etorri " + izena + ", sesioa hasi duzu.");
+    alert("Welcome " + izena + ", you started the session.");
         
     // Redirigir a la página donde se mostrarán los datos
-    window.location.href = "../index.html";
+    window.location.href = "../PRINTZIPALA/printzipala.html";
 }
 
 function validarFormulario() {

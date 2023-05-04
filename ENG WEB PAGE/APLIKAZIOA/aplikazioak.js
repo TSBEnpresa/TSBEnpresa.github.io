@@ -21,9 +21,9 @@ modeSwitch.addEventListener("click" , () =>{
     body.classList.toggle("dark");
     
     if(body.classList.contains("dark")){
-        modeText.innerText = "Modu argia";
+        modeText.innerText = "Light Mode";
     }else{
-        modeText.innerText = "Modu iluna";
+        modeText.innerText = "Night Mode";
         
     }
 });
@@ -35,7 +35,7 @@ function erabiltzaileaKargatu(){
   
   if(izenaBistaratu == null){
 
-    izenaBistaratu = "Erabiltzailea";
+    izenaBistaratu = "User";
 
   }
 
@@ -47,15 +47,15 @@ function erabiltzaileIrten() {
 
   var izenaBistaratu = localStorage.getItem("izenaGorde");
 
-  var erantzuna = confirm(izenaBistaratu + ", sesioa ixtea nahi duzu?");
+  var erantzuna = confirm("¿" + izenaBistaratu + ", do you want to sign out?");
 
   if (erantzuna == true) {
 
-    alert("Sesioa ixten...")
+    alert("Sign out...")
 
     localStorage.clear();
 
-    izenaBistaratu = "Erabiltzailea";
+    izenaBistaratu = "User";
   
     document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
   
@@ -63,7 +63,7 @@ function erabiltzaileIrten() {
 
   }else{
 
-    alert("Sesioa ez ixtea erabaki duzu.")
+    alert("You have chosen not to log out")
 
   }
 
