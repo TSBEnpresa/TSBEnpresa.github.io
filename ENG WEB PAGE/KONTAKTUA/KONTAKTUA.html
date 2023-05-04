@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>TSB | Hasiera</title>
+
+    <!-- BOOTSTRAP Link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--BOOSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- LEHIOAREN IRUDIA -->
+    <link rel="shortcut icon" href="../irudiak/LOGO.png" />
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="KONTAKTUA.css">
+    
+    <!-- MENUAREN IKONOAK -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- JQuery bideoko efektuentzako
+    <script defer src="jquery-3.2.1.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" type="text"></script> -->
+
+</head>
+<body onload="erabiltzaileaKargatu()">
+    
+<!-- MENUAREN HASIERA, menu hau web orriaren menu printzipala da,
+    azkenean beti eskura edukiko dugun menua da -->
+    <nav class="tsb-sidebar close">
+        <header>
+            <div class="irudia-textua">
+                <span class="irudia">
+                    <img src="../irudiak/LOGO.png" alt="">
+                </span>
+
+                <div class="textua logo-textua">
+                    <span class="izena"><p id="izenaBistaratu"></p></span>
+                    <span class="ongiEtorria">ONGI ETORRI!</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="tsb-menu-bar">
+            <div class="tsb-menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Bilatu...">
+                </li>
+
+                <ul class="tsb-menu-links">
+                    <li class="tsb-nav-link">
+                        <a href="../index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="textua nav-text">Hasiera</span>
+                        </a>
+                    </li>
+
+                    <li class="tsb-nav-link">
+                        <a href="../APLIKAZIOA/aplikazioak.html">
+                            <i class='bx bx-window icon' ></i>
+                            <span class="textua nav-text">Aplikazioak</span>
+                        </a>
+                    </li>
+
+                    <li class="tsb-nav-link">
+                        <a href="../DENDA/Denda.html">
+							<i class='bx bx-shopping-bag icon'></i>
+                            <span class="textua nav-text">Denda</span>
+                        </a>
+                    </li>
+
+                    <li class="tsb-nav-link">
+                        <a href="#">
+                            <i class='bx bxs-contact icon' ></i>
+                            <span class="textua nav-text">Kontaktua</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../identifikatu/identifikatu.html" id="identifikatuBtn">
+                        <i class='bx bx-user icon'></i>
+                        <span class="textua nav-text">Identifikatu</span>
+                    </a>
+                </li>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-message-dots icon'></i>
+                        <span class="textua nav-text">EUS | ENG</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text textua">Modu iluna</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+                <center>
+                <div class="bottom-content" style="width: 62px;">
+                    <li class="">
+                        <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="textua nav-text"></span>
+                        </a>
+                    </li>
+                </center>
+                
+            </div>
+        </div>
+
+    </nav>
+<!-- Menuaren bukaera -->
+
+<!-- WEB ORRIAREN HASIERA -->
+    <section class="home home_movil">
+        <!--<video class="bideoa" src="bideoak/autoVideo20Sec.mp4" id="bideoScroll"></video>-->
+
+        <!-- MAPA -->
+        <div style="margin-right: 30px">
+                
+            <div class="col-12 col-xl-6 fleft mt-1">
+                
+                <fieldset>
+                    
+                        <p class="ordutegia" style="font-size: 15px;"><b><h2>GURE ORDUTEGIA</h2></b></p>
+                        <p class="ordutegia" style="font-size: 15px;"><b>Astelehenak:</b> 8:00etatik - 14:30etara</p>
+                        <p class="ordutegia" style="font-size: 15px;"><b>Astearteak, Asteazkenak:</b> 8:00etatik - 14:30etara eta 16:45etatik - 19:30etara</p>
+                        <p class="ordutegia" style="font-size: 15px;"><b>Ostegunak, Ostiralak:</b> 8:00etatik - 14:30etara</p>
+                        <p class="ordutegia" style="font-size: 15px;"><b>Larunbatak:</b> 7:30etatik 13:00etara</p>
+                        <p class="ordutegia" style="font-size: 15px;"><b>Igandeak:</b> Itxita</p>
+                        <p class="ordutegiDuda" style="font-size: 15px;">Edozein duda, gurekin kontaktuan jarri.</p>
+                    
+                </fieldset>
+    
+            </div>
+
+            <iframe class="col-12 col-xl-6 fleft mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2458.8615587031873!2d-2.307495620772782!3d43.17348543875605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51d377d4ad208f%3A0xd70faab353099065!2sIzarraitz%20Lanbide%20Heziketa!5e1!3m2!1ses!2ses!4v1682326971882!5m2!1ses!2ses"
+            width="100%" height="312px" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+        <div class="col-12 fleft">
+
+            <nav class="barra">
+            </nav>
+
+        </div>
+
+        <div class="col-12 fleft">
+
+                    <center><h2 class="kontaktuaTartea textua" style="margin-top: 25px;">KONTAKTUA</h2></center>
+
+                    <div class="col-12 col-xl-6 fleft mt-1">
+                        <center>
+
+                            <form method="post">
+            
+                                <fieldset class="formularioa">
+                        
+                                    <p></p>
+            
+                                    <p><input class="izenAbizen" type="text" placeholder=" Izena" required/><input class="izenAbizen" type="text" placeholder=" Abizena" required /></p>
+                                        
+                                    <p><input class="postaukera" type="text" placeholder="Posta Elektronikoa" required/></p>
+            
+                                    <p><select class="postaukera" required>
+                                        <option value="0">Aukeratu</option>
+                                         <option value="1">Zerbitzuak</option>
+                                         <option value="2">Postua</option>
+                                         <option value="3">Besteren bat</option>
+                                       </select>
+                                    </p>
+            
+                                    <p><textarea class="textoluzea" rows="4" placeholder="Nahi duzuna idatzi..." required></textarea></p>
+            
+                                    <!--Google-en captcha jartzeko probak egiten egon naiz, baina ez dut lortu hartzea.-->
+                                    <!--<div class="g-recaptcha" data-sitekey="6Lf75t0iAAAAAPfe1vBqt0-QX64k3Gw6hEB7XVVU" data-callback="correctCaptcha"></div></p>-->
+            
+                                    <p><input class="artxibua" type="file" accept=".pdf,.jpg,.png"/></p>
+            
+                                    <p class="onartutext"><input class="onartzea" type="checkbox" required>Zuek jarritako araudia irakurri eta onartzen dut.</p>
+            
+                                    <p><input class="bottom" type="reset" value="Ezabatu"></input><input class="bottom" type="submit" value="Bidali"></input></p>
+                                        
+                                </fieldset>
+            
+                            </form>
+
+                        </center>
+                    </div>
+                
+                    <div class="col-12 col-xl-6 fleft mt-1">
+                               
+                            <fieldset>
+        
+                                <h4 style="margin-top: 10px; margin-bottom: 20px; text-decoration: underline;">Enpresaren datuak</h4>
+                                
+                                
+                                <p><i class='bx bx-map ikono'></i>Azkoitia, Gipuzkoa</p>
+
+                                <p><i class='bx bx-phone ikono'></i>(+34) 674 42 99 24 || (+34) 646 26 54 70</p>
+
+                                <p><i class='bx bx-envelope-open ikono'></i>kontaktua@tsbenpresa.eus</p>
+
+                                <p><br></p>
+
+                                <h4 style="margin-top: 10px; margin-bottom: 20px; text-decoration: underline;">Sare Sozialak</h4>
+
+                                <div class="col-12 fleft row">
+
+                                    <div class="col-6">
+
+                                        <p class="sareak"><i class='bx bxl-instagram ikono'></i><a href="https://www.instagram.com/tsb/">Instagram</a></p>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <p class="sareak"><i class='bx bxl-twitter ikono' ></i><a href="https://twitter.com/TSB">Twitter</a></p>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <p class="sareak"><i class='bx bxl-facebook-circle ikono' ></i><a href="https://www.facebook.com/TSBbankUK">Facebook</a></p>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <p class="sareak"><i class='bx bxl-youtube ikono' ></i><a href="https://www.youtube.com/@tsb">YouTube</a></p>
+
+                                    </div>
+        
+                                </div>
+
+                                <div class="col-12 row">
+
+                                    <div class="col-12">
+
+                                        <p class="sareak"><i class='bx bx-globe ikono'></i><a href="https://tsbenpresa.github.io/">Web Orria</a> | Gurekin kontaktuan jarri beharrezkoa bada.</p>
+
+                                    </div>
+                                </div>
+                                    
+                            </fieldset>
+        
+                        </center>
+                    </div>
+        </div>  
+                
+                
+
+        <!-- FOOTERRA -->
+        <div class="footer-basic">
+            <footer>
+                <div class="social">
+                    <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
+                    <li class="list-inline-item"><a href="../">Aplikazioak</a></li>
+                    <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
+                    <li class="list-inline-item"><a href="KONTAKTUA.html">Kontaktua</a></li>
+                </ul>
+                <p class="copyright">TSB ENPRESA © 2023</p>
+            </footer>
+        </div>
+
+    </section>
+<!-- WEB ORRIAREN BUKAERA -->
+
+	<!-- JavaScript dokumentuaren link-a -->
+	<script src="KONTAKTUA.js"></script>
+
+    <!-- BOOTSTRAP eta behar ditudan Script-ak -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
