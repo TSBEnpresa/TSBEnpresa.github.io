@@ -51,7 +51,7 @@ function erabiltzaileIrten() {
 
   if (erantzuna == true) {
 
-    alert("Sign out...")
+    alert("Signing out...")
 
     localStorage.clear();
 
