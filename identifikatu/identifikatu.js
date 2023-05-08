@@ -1,14 +1,14 @@
 function enviarDatos() {
 
     // detener la acción predeterminada del formulario
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Capturar los valores de los campos de entrada
     var izena = document.getElementById("inputIzena").value;
-    
+
     // Ez baduzu ezer sartzen edo, sesioa ixten baduzu gertuko dena
     if (izena == "") {
-        
+
         izena = "Erabiltzailea";
 
     }
@@ -18,7 +18,7 @@ function enviarDatos() {
 
     // Mezua irakustea
     alert("Ongi etorri " + izena + ", sesioa hasi duzu.");
-        
+
     // Redirigir a la página donde se mostrarán los datos
     window.location.href = "../index.html";
 }
@@ -42,4 +42,3 @@ function validarFormulario() {
 
     return valid;
 }
-

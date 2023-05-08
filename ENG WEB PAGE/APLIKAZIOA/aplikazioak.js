@@ -1,162 +1,107 @@
-
 // MENUAREN Script-a
 const body = document.querySelector('body'),
-sidebar = body.querySelector('nav'),
-toggle = body.querySelector(".toggle"),
-searchBtn = body.querySelector(".search-box"),
-modeSwitch = body.querySelector(".toggle-switch"),
-modeText = body.querySelector(".mode-text");
+    sidebar = body.querySelector('nav'),
+    toggle = body.querySelector(".toggle"),
+    searchBtn = body.querySelector(".search-box"),
+    modeSwitch = body.querySelector(".toggle-switch"),
+    modeText = body.querySelector(".mode-text");
 
 
-toggle.addEventListener("click" , () =>{
+toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
-    
+
 })
 
-searchBtn.addEventListener("click" , () =>{
+searchBtn.addEventListener("click", () => {
     sidebar.classList.remove("close");
 })
 
-modeSwitch.addEventListener("click" , () =>{
+modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
+
+    if (body.classList.contains("dark")) {
         modeText.innerText = "Light Mode";
-    }else{
+    } else {
         modeText.innerText = "Night Mode";
-        
+
     }
 });
 
-function erabiltzaileaKargatu(){
-  
-  // Obtén el valor almacenado en localStorage
-  var izenaBistaratu = localStorage.getItem("izenaGorde");
-  
-  if(izenaBistaratu == null){
 
-    izenaBistaratu = "User";
+// Web orrialdea kargatzerakoan exekutatuko dena.
+function erabiltzaileaKargatu() {
 
-  }
+    // Erabiltzaileak bere izena sartu badu, honekin izen hori lortuko dugu.
+    var izenaBistaratu = localStorage.getItem("izenaGorde");
 
-  document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
+    // Erabiltzailerik ez badago sartuta, defektuzkoa jarriko dugu.
+    if (izenaBistaratu == null) {
+
+        izenaBistaratu = "Erabiltzailea";
+
+    }
+
+    // Web orria kargatzerakoan, erabiltzailerik kargatuko du.
+    document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
 
 }
 
+// Irteteko botoia sakatzerakoan kontutan hartuko dena.
 function erabiltzaileIrten() {
 
-  var izenaBistaratu = localStorage.getItem("izenaGorde");
+    // Erabiltzaileak bere izena sartu badu, honekin izen hori lortuko dugu.
+    var izenaBistaratu = localStorage.getItem("izenaGorde");
 
-  var erantzuna = confirm("¿" + izenaBistaratu + ", do you want to sign out?");
+    // Ixtea nahi al dun edo ez galdetuko diogu erabiltzaileari.
+    var erantzuna = confirm(izenaBistaratu + ", sesioa ixtea nahi duzu?");
 
-  if (erantzuna == true) {
+    // Sesioa ixtea erabakitzen baduzu azalduko dena.
+    if (erantzuna == true) {
 
-    alert("Signing out...")
+        // Sesioa ixten hari garela abixatuko diogu.
+        alert("Sesioa ixten...")
 
-    localStorage.clear();
+        // Gordeta edo sesioa hasita duen erabiltzailea ezabatu/sesioa ixteko.
+        localStorage.clear();
 
-    izenaBistaratu = "User";
-  
-    document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
-  
-    location.reload();
+        // Defektuzkoa jarri berriro
+        izenaBistaratu = "Erabiltzailea";
 
-  }else{
+        // Menuaren goi buruaren irakutzi.
+        document.getElementById("izenaBistaratu").textContent = izenaBistaratu;
 
-    alert("You have chosen not to log out")
+        // web orria berriro kargatu.
+        location.reload();
 
-  }
+        // Sesioa ez ixtea erabakitzen baduzu azalduko dena.
+    } else {
 
+        // Sesia itxi dela irakutsiko diogu.
+        alert("Sesioa ez ixtea erabaki duzu.")
 
-  
+    }
+
 }
 
+// Honekin bideua bakarrik erreproduzitzea lortzen dugu.
 var video = document.getElementById('mi-video');
 
+// Behera goazen moduan bideoak jarraituko du edo ez (Segun ikusten al dugun edo ez, pantailan)
 window.addEventListener('scroll', function() {
-  var videoPosition = video.getBoundingClientRect();
 
-  if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
+    var videoPosition = video.getBoundingClientRect();
 
+    // Pantailaren posizioa kontutan izanda
+    if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight) {
 
+        //  Bideua martxan jarri.
+        video.play();
 
-// Con este codigo lo que hago es, que el video de la pagina principal, se reproduzca al pasar por encima,
-// Pero al quitarlo de la pantalla, se pause y si te alejas mucho, se reinicie por completo.
+    } else {
 
-/*var vid = document.getElementById("bideoScroll");
-var playing = false;
+        // Bideua gelditu
+        video.pause();
 
-function getCurTime() { 
-  alert(vid.currentTime);
-} 
-
-function setCurTime() { 
-  vid.currentTime=5;
-} 
-
-function playVideo() {
-  vid.play();
-  playing = true;
-}
-
-function pauseVideo() {
-  vid.pause();
-  playing = false;
-}
-
-window.addEventListener('scroll', function() {
-  if (playing) {
-    if (window.scrollY >= vid.offsetTop + vid.offsetHeight || window.scrollY + window.innerHeight <= vid.offsetTop) {
-      pauseVideo();
     }
-  } else {
-    if (window.scrollY < vid.offsetTop + vid.offsetHeight && window.scrollY + window.innerHeight > vid.offsetTop) {
-      playVideo();
-    }
-  }
-});*/
 
-
-
-// Al hacer scroll en la pagina, el video se ira reproduciendo, de momento lo dejo desactivado, ya que el video se queda en "position: fixed;"
-// Y mi intencion es, que cuando acabe el video, la "position" se cambie, para poder seguir navegando tranquilamente.
-
-/*var vid = document.getElementById("bideoScroll");
-var playing = false; 
-
-function playVideo() {
-  vid.play();
-  playing = true;
-}
-
-function pauseVideo() {
-  vid.pause();
-  playing = false;
-}
-
-window.addEventListener('scroll', function() {
-  var position = window.scrollY / window.innerHeight  ;
-  vid.currentTime = position;
 });
-
-var video = document.querySelector('.bideoa');
-var videoContainer = document.querySelector('.video-container');
-
-// Comprueba la posición del video cada segundo
-var checkVideoPosition = setInterval(function() {
-  if (video.currentTime >= 20) {
-    // Cambia la posición del video a "position: absolute;"
-    videoContainer.style.position = 'absolute';
-    clearInterval(checkVideoPosition);
-  }
-}, 1000);
-
-// Cambia la posición del video a "position: absolute;" cuando termina de reproducirse
-video.addEventListener('ended', function() {
-  videoContainer.style.position = 'absolute';
-});*/

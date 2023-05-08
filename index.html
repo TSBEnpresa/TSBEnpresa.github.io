@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>TSB | Hasiera</title>
+    <!-- TITULOA | TITLE -->
+    <title>TSB | Hasiera</title>
 
     <!-- BOOTSTRAP Link -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- LEHIOAREN IRUDIA -->
     <link rel="shortcut icon" href="irudiak/LOGO.png" />
-	
+
     <!-- CSS -->
     <link rel="stylesheet" href="PRINTZIPALA/PRINTZIPALA.css">
-    
+
     <!-- MENUAREN IKONOAK -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    
-
-    <!-- JQuery bideoko efektuentzako
-    <script defer src="jquery-3.2.1.min.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" type="text"></script> -->
-
 </head>
+
 <body onload="erabiltzaileaKargatu()">
-    
-<!-- MENUAREN HASIERA, menu hau web orriaren menu printzipala da,
-    azkenean beti eskura edukiko dugun menua da -->
+
+    <!-- WEB ORRI MENUA | MENU OF WEB PAGE -->
     <nav class="tsb-sidebar close">
         <header>
             <div class="irudia-textua">
                 <span class="irudia">
+                    <!-- Goi buruaren logoa -->
                     <img src="irudiak/LOGO.png" alt="">
                 </span>
 
                 <div class="textua logo-textua">
+                    <!-- Goi buru textua -->
                     <span class="izena"><p id="izenaBistaratu"></p></span>
                     <span class="ongiEtorria">ONGI ETORRI!</span>
                 </div>
@@ -51,35 +49,40 @@
             <div class="tsb-menu">
 
                 <li class="search-box">
+                    <!-- Bilaketa opzioa | Search option -->
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Bilatu...">
                 </li>
 
                 <ul class="tsb-menu-links">
                     <li class="tsb-nav-link">
+                        <!-- Hasiera botoia | Home buttom -->
                         <a href="index.html">
-                            <i class='bx bx-home-alt icon' ></i>
+                            <i class='bx bx-home-alt icon'></i>
                             <span class="textua nav-text">Hasiera</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Aplikazio botoia | App buttom -->
                         <a href="APLIKAZIOA/aplikazioak.html">
-                            <i class='bx bx-window icon' ></i>
+                            <i class='bx bx-window icon'></i>
                             <span class="textua nav-text">Aplikazioak</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Denda botoia | Store buttom -->
                         <a href="DENDA/Denda.html">
-							<i class='bx bx-shopping-bag icon'></i>
+                            <i class='bx bx-shopping-bag icon'></i>
                             <span class="textua nav-text">Denda</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Kontaktua botoia | Contact buttom -->
                         <a href="KONTAKTUA/KONTAKTUA.html">
-                            <i class='bx bxs-contact icon' ></i>
+                            <i class='bx bxs-contact icon'></i>
                             <span class="textua nav-text">Kontaktua</span>
                         </a>
                     </li>
@@ -89,70 +92,81 @@
 
             <div class="bottom-content">
                 <li class="">
+                    <!-- Identifikazio botoia | Identify buttom -->
                     <a href="identifikatu/identifikatu.html" id="identifikatuBtn">
                         <i class='bx bx-user icon'></i>
                         <span class="textua nav-text">Identifikatu</span>
                     </a>
                 </li>
 
-            <div class="bottom-content">
-                <li class="">
-                    <a href="ENG WEB PAGE/PRINTZIPALA/printzipala.html">
-                        <i class='bx bx-message-dots icon'></i>
-                        <span class="textua nav-text">EUS | ENG</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text textua">Modu iluna</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-
-                <center>
-                <div class="bottom-content" style="width: 62px;">
+                <div class="bottom-content">
                     <li class="">
-                        <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="textua nav-text"></span>
+                        <!-- Hizkuntzaz aldatzeko botoia | Change lenguage buttom -->
+                        <a href="ENG WEB PAGE/PRINTZIPALA/printzipala.html">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="textua nav-text">EUS | ENG</span>
                         </a>
                     </li>
-                </center>
-                
-            </div>
-        </div>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <!-- Modu iluna edo argia jartzeko opzioa | change color mode -->
+                        <span class="mode-text textua">Modu iluna</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+
+                    <center>
+                        <div class="bottom-content" style="width: 62px;">
+                            <li class="">
+                                <!-- Erabiltzailetik atera | User Log out -->
+                                <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
+                                    <i class='bx bx-log-out icon'></i>
+                                    <span class="textua nav-text"></span>
+                                </a>
+                            </li>
+                    </center>
+
+                    </div>
+                </div>
 
     </nav>
-<!-- Menuaren bukaera -->
 
-<!-- WEB ORRIAREN HASIERA -->
+    <!-- WEB ORRIAREN HASIERA -->
     <section class="home home_movil">
 
+        <!-- Lehenengo ilera | First Row -->
         <div class="col-12 fleft">
+            <!-- Lehenengo kolumna | First Column -->
             <div class="col-12 col-xl-6 fleft mt-0">
+
+                <!-- Irudien karousela | Image carousel -->
                 <div class="slide">
                     <div class="slide-inner">
-                        <input class="slide-open" type="radio" id="slide-1" 
-                              name="slide" aria-hidden="true" hidden="" checked="checked">
+
+                        <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <!-- Lehenengo irudia | First Image-->
                         <div class="slide-item">
                             <img src="irudiak/EmpresaIrudia.jpg">
                         </div>
-                        <input class="slide-open" type="radio" id="slide-2" 
-                              name="slide" aria-hidden="true" hidden="">
+
+                        <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+                        <!-- Bigarrengo irudia | Second image -->
                         <div class="slide-item">
                             <img src="irudiak/EmpresaBarrutik.jpg">
                         </div>
-                        <input class="slide-open" type="radio" id="slide-3" 
-                              name="slide" aria-hidden="true" hidden="">
+
+                        <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+                        <!-- Hirugarrengo irudia | Third image -->
                         <div class="slide-item">
                             <img src="irudiak/EntradaFoto.jpg">
                         </div>
+                        <!-- Karouselaren kontrolak | Controls of carousel -->
                         <label for="slide-3" class="slide-control prev control-1">‹</label>
                         <label for="slide-2" class="slide-control next control-1">›</label>
                         <label for="slide-1" class="slide-control prev control-2">‹</label>
@@ -173,24 +187,23 @@
                     </div>
                 </div>
             </div>
-    
+
+            <!-- Bigarrengo kolumna | Second column -->
             <div class="col-12 col-xl-6 fleft mt-1">
                 <div class="textua tx_movil">
-                    
+
+                    <!-- Titulua | Title -->
                     <h2>Gure TSB enpresa</h2>
 
+                    <!-- Textua | Text -->
                     <p class="barrukoText">
-                        
-                        TSB enpresak informatika konpontzean, programazioan eta web orri diseinuan espezializatutako 
-                        enpresa da. 10 urte baino gehiagoko esperientziarekin, Enpresaren Urtea bezalako sari ugari 
-                        irabazi ditugu. 
+
+                        TSB enpresak informatika konpontzean, programazioan eta web orri diseinuan espezializatutako enpresa da. 10 urte baino gehiagoko esperientziarekin, Enpresaren Urtea bezalako sari ugari irabazi ditugu.
 
                     </p>
-                    <p class="barrukoText">   
-                        Gure aditu-taldeak teknologia ezagutzak ditu eta gure bezeroen beharrak asetzeko 
-                        ebazpen berritzaileak eskaintzen ditu. Zure gailua konpondu behar baduzu, software pertsonalizatua 
-                        garatu edo web orri moderno eta funtzionala sortu behar baduzu, TSB zure aukera onena da. Ustea 
-                        ezazu gurekin kalitatezko zerbitzuak eta emaitza apartak lortzeko, digitaleko munduan.
+                    <p class="barrukoText">
+                        Gure aditu-taldeak teknologia ezagutzak ditu eta gure bezeroen beharrak asetzeko ebazpen berritzaileak eskaintzen ditu. Zure gailua konpondu behar baduzu, software pertsonalizatua garatu edo web orri moderno eta funtzionala sortu behar baduzu, TSB zure
+                        aukera onena da. Ustea ezazu gurekin kalitatezko zerbitzuak eta emaitza apartak lortzeko, digitaleko munduan.
 
                     </p>
 
@@ -198,24 +211,23 @@
                 </div>
             </div>
         </div>
-    
-    
+
+        <!-- Bigarrengo ilera | Second row -->
         <div class="col-12 fleft">
+            <!-- Lehenengo kolumna | First Column -->
             <div class="col-12 col-xl-6 fleft mt-01">
-                
+
                 <div class="textua tx_movil">
-                    
+                    <!-- Titulua | Title -->
                     <h2>Zer egiten dugu?</h2>
-    
+
                     <p style="margin-top: 15px;" class="barrukoText">
-                            
-                        TSB enpresa programazioaren eta web aplikazioen diseinuaren alorrean aritzen da.
-                        Era berean, sistemak kudeatzeko, datu-baseak sortzeko eta informatika-gailuak konpontzeko 
-                        zerbitzuak eskaintzen ditugu. Laburbilduz, informazio-teknologiarekin lotutako guztia 
+
+                        TSB enpresa programazioaren eta web aplikazioen diseinuaren alorrean aritzen da. Era berean, sistemak kudeatzeko, datu-baseak sortzeko eta informatika-gailuak konpontzeko zerbitzuak eskaintzen ditugu. Laburbilduz, informazio-teknologiarekin lotutako guztia
                         kudeatzen dugu eta zure sistemak eraginkortasunez funtzionatzen direla bermatzen dugu.
-    
+
                     </p>
-                    <p class="barrukoText">  
+                    <p class="barrukoText">
 
                         <li class="barrukoText">
                             Web edo mahaigaineko programazioa eta diseinua.
@@ -236,22 +248,24 @@
                         </li>
 
                     </p>
-                    <p class="barrukoText">  
+                    <p class="barrukoText">
 
                         <li class="barrukoText">
                             Informatika gailuen konponketak.
                         </li>
-    
+
                     </p>
-    
+
                 </div>
 
             </div>
-    
+
+            <!-- Bigarrengo kolumna | Second column -->
             <div class="col-12 col-xl-6 fleft mt-1">
-                
+
                 <div>
 
+                    <!-- Enpresari sarrera emateko bideo txiki bat | Small video to give an introduction to the company -->
                     <video id="mi-video" class="irudiak bideoTartea" src="bideoak/autoVideo20Sec.mp4"></video>
 
                 </div>
@@ -259,33 +273,39 @@
             </div>
         </div>
 
+        <!-- Lerro tarteko lekua | Spaces for row -->
         <nav class="barra">
         </nav>
 
+        <!-- Hirugarrengo ilera | Thrid Row -->
         <div class="col-12 fleft">
+            <!-- Lehenengo kolumna | First Column -->
             <div class="col-12 col-xl-6 fleft mt-0">
-                
+
+                <!-- Tutorialaren bideo txiki bat | Little intro for video tutorial -->
                 <video id="mi-video" class="irudiak" src="bideoak/TutorialBideoMotza.mp4" controls></video>
-                
+
             </div>
-    
+
+            <!-- Bigarrengo kolumna | Second column -->
             <div class="col-12 col-xl-6 fleft mt-1">
                 <div class="textua tx_movil">
-                    
+
+                    <!-- Titulua | Title -->
                     <h2>Aplikazioak</h2>
 
+                    <!-- Textua | Text -->
                     <p class="barrukoText">
-                        
-                        Gure informatika-gailuen inbentario aplikazioa enpresaren informatika-gailu guztiak ondo kudeatzeko 
-                        erabilgarria den tresna da. Sarrerako aukera desberdinak erabiliz, administratzaileek informatika-gailuak 
-                        gehitu eta kendu ditzakete, baina langile arruntak soilik dauden gailuak ikusi ditzake. Honek bermatzen du 
-                        enpresaren informatika-gailuak ondo antolatuta daudela eta behar bada, erraz aurkitu daitezkeela.
+
+                        Gure informatika-gailuen inbentario aplikazioa enpresaren informatika-gailu guztiak ondo kudeatzeko erabilgarria den tresna da. Sarrerako aukera desberdinak erabiliz, administratzaileek informatika-gailuak gehitu eta kendu ditzakete, baina langile arruntak
+                        soilik dauden gailuak ikusi ditzake. Honek bermatzen du enpresaren informatika-gailuak ondo antolatuta daudela eta behar bada, erraz aurkitu daitezkeela.
 
                     </p>
-                    <p class="barrukoText">   
+                    <p class="barrukoText">
                         Gehiago jakin nahi baduzu, botoia sakatu:
                     </p>
 
+                    <!-- Aplikaziora joateko Botoia | App Buttom -->
                     <div style="background-color: #00778b;  border-radius: 15px;">
                         <a href="APLIKAZIOAK/aplikazioak.html" style="text-decoration: none;">
                             <span class="textua nav-text" style="font-size: 20px; justify-content: center; display: flex; color: white;">
@@ -298,28 +318,31 @@
             </div>
         </div>
 
+        <!-- Lerro tarteko lekua | Spaces for row -->
         <nav class="barra">
         </nav>
 
+        <!-- Laugarren ilera | Quarter row -->
         <div class="col-12 fleft">
+            <!-- Lehenengo kolumna | First Column -->
             <div class="col-12 col-xl-6 fleft mt-0">
-                
+
                 <div class="textua tx_movil">
-                    
+                    <!-- Titulua | Title -->
                     <h2>Denda Ofiziala</h2>
 
+                    <!-- Textua | Text -->
                     <p class="barrukoText">
-                        
-                       Kamisetak, jertseak eta hainbat osagarri aurkitu ditzakezu. Gure produktuak 
-                        kalitatezkoa eta diseinu original eta berritzailez beteta daude. Baita ere, erosi 
-                        dezakezun produktu bakoitzaren argazkiak ikusi ahal izango dituzu, horrela ondo 
-                        azalduz zein produktua erosten ari zaren. Eskerrik asko zure interesa agertzeagatik!
+
+                        Kamisetak, jertseak eta hainbat osagarri aurkitu ditzakezu. Gure produktuak kalitatezkoa eta diseinu original eta berritzailez beteta daude. Baita ere, erosi dezakezun produktu bakoitzaren argazkiak ikusi ahal izango dituzu, horrela ondo azalduz zein
+                        produktua erosten ari zaren. Eskerrik asko zure interesa agertzeagatik!
 
                     </p>
-                    <p class="barrukoText">   
+                    <p class="barrukoText">
                         Gehiago jakin nahi baduzu, botoia sakatu:
                     </p>
 
+                    <!-- Denda barrura sartzeko botoia | Store buttom -->
                     <div style="background-color: #00778b;  border-radius: 15px;">
                         <a href="DENDA/Denda.html" style="text-decoration: none;">
                             <span class="textua nav-text" style="margin-bottom: 10px; font-size: 20px; justify-content: center; display: flex; color: white;">
@@ -329,75 +352,41 @@
                     </div>
 
                 </div>
-                
+
             </div>
-    
+
+            <!-- Bigarrengo kolumna | Second column -->
             <div class="col-12 col-xl-6 fleft mt-1">
-                
+
+                <!-- Dendaren irudia | Store image -->
                 <img class="irudiak bideoTartea" src="irudiak/DendaLogoa.png" alt="">
 
             </div>
         </div>
-        
-        <!--<div class="col-12 fleft centrar">
-            <div class="col-12 col-xl-3 fleft mt-0">
-                
-                <div class="card">
-                    <img src="DENDA/Artikuluak/Kamisetak/UrinaNew.jpg">
-                    <div class="card-content">
-                      <h3>Kamisetak</h3>
-                      <p>TSB denda ofizialeko kamisetak</p>
-                      <a href="DENDA/Denda.html">Kamiseta</a>
-                    </div>
-                  </div>                  
-                
-                </div>
-        
-                <div class="col-12 col-xl-3 fleft mt-1">
-                    
-                    <div class="card">
-                        <img src="DENDA/Artikuluak/Jertseak/GrisIlunaNew.jpg">
-                        <div class="card-content">
-                            <h3>Jertseak</h3>
-                            <p>TSB denda ofizialeko jertseak</p>
-                            <a href="DENDA/Denda.html">Jertsea</a>
-                        </div>
-                    </div> 
 
-                </div>
-
-                <div class="col-12 col-xl-3 fleft mt-0">
-                    
-                    <div class="card">
-                        <img src="DENDA/Artikuluak/Gehigarriak/poltsaTSB.jpg">
-                        <div class="card-content">
-                            <h3>Gehigarriak</h3>
-                            <p>TSB denda ofizialeko gehigarriak</p>
-                            <a href="DENDA/Denda.html">Gehigarriak</a>
-                        </div>
-                    </div>                  
-                
-                 </div>
-
-        </div>-->
-        
+        <!-- Lerro tarteko lekua | Spaces for row -->
         <nav class="barra">
         </nav>
 
+        <!-- Bostgarren ilera | Fifth row -->
         <div class="col-12 fleft">
+            <!-- Lehenengo kolumna | First column -->
             <div class="col-12 col-xl-6 fleft mt-0">
-                
+
+                <!-- Google mapa | google maps -->
                 <iframe class="irudiak" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2909.7221286865683!2d-2.3102575234348577!3d43.17335658333279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51d377d4ad208f%3A0xd70faab353099065!2sIzarraitz%20Lanbide%20Heziketa!5e0!3m2!1ses!2ses!4v1682631822891!5m2!1ses!2ses"
-                width="100%" height="450" style="border:0; margin-bottom: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
+                    width="100%" height="450" style="border:0; margin-bottom: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
-    
+
+            <!-- Bigarren kolumna | Second column -->
             <div class="col-12 col-xl-6 fleft mt-1">
-                
+
                 <div class="textua tx_movil">
-                    
+
+                    <!-- Ordutegia | Schedule -->
                     <fieldset style="font-size: 15px; margin-bottom: 45px;">
-                    
+
                         <p class="ordutegia"><b><h2>GURE ORDUTEGIA</h2></b></p>
                         <p class="ordutegia"><b>Astelehenak:</b> 8:00etatik - 14:30etara</p>
                         <p class="ordutegia"><b>Astearteak, Asteazkenak:</b> 8:00etatik - 14:30etara eta 16:45etatik - 19:30etara</p>
@@ -405,9 +394,10 @@
                         <p class="ordutegia"><b>Larunbatak:</b> 7:30etatik 13:00etara</p>
                         <p class="ordutegia"><b>Igandeak:</b> Itxita</p>
                         <p class="ordutegiDuda">Edozein duda, gurekin kontaktuan jarri.</p>
-                    
+
                     </fieldset>
 
+                    <!-- Kontatuan jartzeko botoia | Contact buttom -->
                     <div style="background-color: white;  border-radius: 15px;">
                         <a href="KONTAKTUA/KONTAKTUA.html" style="text-decoration: none;">
                             <span class="textua nav-text" style="font-size: 20px; border-radius: 15px; border: 1px solid #00778b; justify-content: center; display: flex; color: #00778b;">
@@ -415,44 +405,48 @@
                             </span>
                         </a>
                     </div>
-    
+
                 </div>
 
             </div>
         </div>
 
+        <!-- Web Orriaren azpikoa | Web Page Footer -->
+        <div class="footer-basic">
+            <footer>
 
-       <!-- FOOTERRA -->
-       <div class="footer-basic">
-        <footer>
-            <div class="social">
-                <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
-                <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
-            </div>
-            <ul class="list-inline">
-                
-                <li class="list-inline-item"><a href="index.html">Hasiera</a></li>
-                <li class="list-inline-item"><a href="APLIKAZIOA/aplikazioak.html">Aplikazioak</a></li>
-                <li class="list-inline-item"><a href="DENDA/Denda.html">Denda</a></li>
-                <li class="list-inline-item"><a href="KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
-            </ul>
-            <p class="copyright">TSB ENPRESA © 2023</p>
-        </footer>
-    </div>
+                <!-- Sare sozialak | Social networks -->
+                <div class="social">
+                    <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
+                </div>
+
+                <!-- Menu txiki bat | Little menu -->
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="index.html">Hasiera</a></li>
+                    <li class="list-inline-item"><a href="APLIKAZIOA/aplikazioak.html">Aplikazioak</a></li>
+                    <li class="list-inline-item"><a href="DENDA/Denda.html">Denda</a></li>
+                    <li class="list-inline-item"><a href="KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
+                </ul>
+
+                <p class="copyright">TSB ENPRESA © 2023</p>
+
+            </footer>
+        </div>
 
 
     </section>
-<!-- WEB ORRIAREN BUKAERA -->
 
-	<!-- JavaScript dokumentuaren link-a -->
-	<script src="PRINTZIPALA/PRINTZIPALA.js"></script>
+    <!-- JavaScript dokumentuaren link-a -->
+    <script src="PRINTZIPALA/PRINTZIPALA.js"></script>
 
-    <!-- BOOTSTRAP eta behar ditudan Script-ak -->
+    <!-- BOOTSTRAP eta behar ditugun Script-ak -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
