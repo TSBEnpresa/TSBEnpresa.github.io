@@ -1,96 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>TSB | Hasiera</title>
+    <title>TSB | Hasiera</title>
 
     <!-- BOOTSTRAP Link -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- LEHIOAREN IRUDIA -->
     <link rel="shortcut icon" href="../irudiak/LOGO.png" />
-	
+
     <!-- CSS -->
     <link rel="stylesheet" href="aplikazioak.css">
-    
+
     <!-- MENUAREN IKONOAK -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body onload="erabiltzaileaKargatu()">
-    
-    <!-- MENUAREN HASIERA, menu hau web orriaren menu printzipala da,
-        azkenean beti eskura edukiko dugun menua da -->
-        <nav class="tsb-sidebar close">
-            <header>
-                <div class="irudia-textua">
-                    <span class="irudia">
+
+    <!-- WEB ORRI MENUA | MENU OF WEB PAGE -->
+    <nav class="tsb-sidebar close">
+        <header>
+            <div class="irudia-textua">
+                <span class="irudia">
+                    <!-- Goi buruaren logoa -->
                         <img src="../irudiak/LOGO.png" alt="">
                     </span>
 
-                    <div class="textua logo-textua">
-                        <span class="izena"><p id="izenaBistaratu"></p></span>
-                        <span class="ongiEtorria">ONGI ETORRI!</span>
-                    </div>
+                <div class="textua logo-textua">
+                    <!-- Goi buru textua -->
+                    <span class="izena"><p id="izenaBistaratu"></p></span>
+                    <span class="ongiEtorria">ONGI ETORRI!</span>
                 </div>
+            </div>
 
-                <i class='bx bx-chevron-right toggle'></i>
-            </header>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
 
-            <div class="tsb-menu-bar">
-                <div class="tsb-menu">
+        <div class="tsb-menu-bar">
+            <div class="tsb-menu">
 
-                    <li class="search-box">
-                        <i class='bx bx-search icon'></i>
-                        <input type="text" placeholder="Bilatu...">
-                    </li>
+                <li class="search-box">
+                    <!-- Bilaketa opzioa | Search option -->
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Bilatu...">
+                </li>
 
-                    <ul class="tsb-menu-links">
-                        <li class="tsb-nav-link">
-                            <a href="../index.html">
-                                <i class='bx bx-home-alt icon' ></i>
-                                <span class="textua nav-text">Hasiera</span>
-                            </a>
-                        </li>
-
-                        <li class="tsb-nav-link">
-                            <a href="aplikazioak.html">
-                                <i class='bx bx-window icon' ></i>
-                                <span class="textua nav-text">Aplikazioak</span>
-                            </a>
-                        </li>
-
-                        <li class="tsb-nav-link">
-                            <a href="../DENDA/Denda.html">
-                                <i class='bx bx-shopping-bag icon'></i>
-                                <span class="textua nav-text">Denda</span>
-                            </a>
-                        </li>
-
-                        <li class="tsb-nav-link">
-                            <a href="../KONTAKTUA/KONTAKTUA.html">
-                                <i class='bx bxs-contact icon' ></i>
-                                <span class="textua nav-text">Kontaktua</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="bottom-content">
-                    <li class="">
-                        <a href="../identifikatu/identifikatu.html" id="identifikatuBtn">
-                            <i class='bx bx-user icon'></i>
-                            <span class="textua nav-text">Identifikatu</span>
+                <ul class="tsb-menu-links">
+                    <li class="tsb-nav-link">
+                        <!-- Hasiera botoia | Home buttom -->
+                        <a href="../index.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="textua nav-text">Hasiera</span>
                         </a>
                     </li>
 
+                    <li class="tsb-nav-link">
+                        <!-- Aplikazio botoia | App buttom -->
+                        <a href="aplikazioak.html">
+                            <i class='bx bx-window icon'></i>
+                            <span class="textua nav-text">Aplikazioak</span>
+                        </a>
+                    </li>
+
+                    <li class="tsb-nav-link">
+                        <!-- Denda botoia | Store buttom -->
+                        <a href="../DENDA/Denda.html">
+                            <i class='bx bx-shopping-bag icon'></i>
+                            <span class="textua nav-text">Denda</span>
+                        </a>
+                    </li>
+
+                    <li class="tsb-nav-link">
+                        <!-- Kontaktua botoia | Contact buttom -->
+                        <a href="../KONTAKTUA/KONTAKTUA.html">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="textua nav-text">Kontaktua</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <!-- Identifikazio botoia | Identify buttom -->
+                    <a href="../identifikatu/identifikatu.html" id="identifikatuBtn">
+                        <i class='bx bx-user icon'></i>
+                        <span class="textua nav-text">Identifikatu</span>
+                    </a>
+                </li>
+
                 <div class="bottom-content">
                     <li class="">
+                        <!-- Hizkuntzaz aldatzeko botoia | Change lenguage buttom -->
                         <a href="../ENG WEB PAGE/APLIKAZIOA/aplikazioak.html">
                             <i class='bx bx-message-dots icon'></i>
                             <span class="textua nav-text">EUS | ENG</span>
@@ -102,6 +112,7 @@
                             <i class='bx bx-moon icon moon'></i>
                             <i class='bx bx-sun icon sun'></i>
                         </div>
+                        <!-- Modu iluna edo argia jartzeko opzioa | change color mode -->
                         <span class="mode-text textua">Modu iluna</span>
 
                         <div class="toggle-switch">
@@ -110,229 +121,217 @@
                     </li>
 
                     <center>
-                    <div class="bottom-content" style="width: 62px;">
-                        <li class="">
-                            <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
-                                <i class='bx bx-log-out icon'></i>
-                                <span class="textua nav-text"></span>
-                            </a>
-                        </li>
+                        <div class="bottom-content" style="width: 62px;">
+                            <li class="">
+                                <!-- Erabiltzailetik atera | User Log out -->
+                                <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
+                                    <i class='bx bx-log-out icon'></i>
+                                    <span class="textua nav-text"></span>
+                                </a>
+                            </li>
                     </center>
-                    
-                </div>
-            </div>
 
-        </nav>
+                    </div>
+                </div>
+
+    </nav>
     <!-- Menuaren bukaera -->
 
     <!-- WEB ORRIAREN HASIERA | BEGINNING WEB PAGE -->
-        <section class="home home_movil">
+    <section class="home home_movil">
 
         <!-- INBENTARIOAREN APLIKAZIOAREN PARTEA | PART OF THE INVENTORY APP -->
 
-            <!-- LEHENENGO FILA | FIRST ROW -->
-            <div class="col-12 fleft">
+        <!-- LEHENENGO FILA | FIRST ROW -->
+        <div class="col-12 fleft">
+            <div class="textua tx_movil">
+
+                <!-- WEB ORRIAREN LEHENENGO APP | SECOND APP FOR THE WEB PAGE -->
+                <h2 style="margin-top: 15px; font-weight: bold; display: flex; justify-content: center;">
+                    INBENTARIOA GESTIONATZEKO APLIKAZIOA
+                </h2>
+
+            </div>
+        </div>
+
+        <!-- BIGARREN FILA | SECOND ROW -->
+        <div class="col-12 fleft" style="margin-top: 10px;">
+
+            <!-- COLUMNA BAT | ONE COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-0">
+
+                <img class="irudiak goikoa" src="../irudiak/app11.jpg" alt="">
+
+            </div>
+
+            <!-- COLUMNA BI | SECOND COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-1">
                 <div class="textua tx_movil">
 
-                    <!-- WEB ORRIAREN LEHENENGO APP | SECOND APP FOR THE WEB PAGE -->
-                    <h2 style="margin-top: 15px; font-weight: bold; display: flex; justify-content: center;">
-                        INBENTARIOA GESTIONATZEKO APLIKAZIOA
-                    </h2>
+                    <p class="barrukoText">
+
+                        Lehenik eta behin, gure aplikaziora sartzeko bi aukera ditugu. Aukera bat administratzailearentzat eta beste aukera bat langile arrunt batentzat. Administratzaileak menu bat izango du, horren barruan hiru aukera ditu.
+
+                    </p>
+                    <p class="barrukoText">
+
+                        Lehenengo aukera, gailu bati alta emateko balio du. Honek esan nahi du aplikazioko datu-basean informatika-gailu berri bat gehitu dezakegula. Aukera hau erabilgarria da enpresak informatika-gailu berriak erosten dituenean eta gailu horren kontrola ematea
+                        nahi bada.
+
+                    </p>
 
                 </div>
             </div>
-            
-            <!-- BIGARREN FILA | SECOND ROW -->
-            <div class="col-12 fleft" style="margin-top: 10px;">
+        </div>
 
-                <!-- COLUMNA BAT | ONE COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-0">
-                    
-                    <img class="irudiak goikoa" src="../irudiak/app11.jpg" alt="">
+        <!-- HIRUGARREN FILA | THIRD ROW -->
+        <div class="col-12 fleft">
 
-                </div>
-        
-                <!-- COLUMNA BI | SECOND COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-1">
-                    <div class="textua tx_movil">
-                        
-                        <p class="barrukoText">
-                            
-                            Lehenik eta behin, gure aplikaziora sartzeko bi aukera ditugu. 
-                            Aukera bat administratzailearentzat eta beste aukera bat langile arrunt 
-                            batentzat. Administratzaileak menu bat izango du, horren barruan hiru aukera ditu.
+            <!-- COLUMNA BAT | ONE COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-01">
 
-                        </p>
-                        <p class="barrukoText">
+                <div class="textua tx_movil tart">
 
-                            Lehenengo aukera, gailu bati alta emateko balio du. Honek esan nahi du aplikazioko
-                            datu-basean informatika-gailu berri bat gehitu dezakegula. Aukera hau erabilgarria
-                            da enpresak informatika-gailu berriak erosten dituenean eta gailu horren kontrola 
-                            ematea nahi bada.
+                    <p style="margin-top: 15px;" class="barrukoText">
 
-                        </p>
+                        Bigarren aukera, gailu bati baja emateko balio du. Honek esan nahi du aplikazioko datu-basean informatika-gailu bat kendu edo baja eman dezakezula. Adibidez, gailu batek ez badu funtzionatzen baja emateko aukera izango duzu.
 
-                    </div>
-                </div>
-            </div>
-        
-            <!-- HIRUGARREN FILA | THIRD ROW -->
-            <div class="col-12 fleft">
-                
-                <!-- COLUMNA BAT | ONE COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-01">
-                    
-                    <div class="textua tx_movil tart">
-        
-                        <p style="margin-top: 15px;" class="barrukoText">
+                    </p>
 
-                            Bigarren aukera, gailu bati baja emateko balio du.
-                            Honek esan nahi du aplikazioko datu-basean informatika-gailu bat kendu edo baja eman
-                            dezakezula. Adibidez, gailu batek ez badu funtzionatzen baja emateko aukera izango duzu.
+                    <p style="margin-top: 15px;" class="barrukoText">
 
-                        </p>
-
-                        <p style="margin-top: 15px;" class="barrukoText">
-
-                            Hirugarren aukerak, datu base barruan ditugun gailu guztiak bistaratzeko 
-                            aukera ematen digu. Honek esan nahi du aplikazioko datu-basean dauden 
-                            informatika-gailu guztien zerrenda ikusi dezakezula.
+                        Hirugarren aukerak, datu base barruan ditugun gailu guztiak bistaratzeko aukera ematen digu. Honek esan nahi du aplikazioko datu-basean dauden informatika-gailu guztien zerrenda ikusi dezakezula.
 
 
-                        </p>
+                    </p>
 
-                        <p style="margin-top: 15px;" class="barrukoText">
+                    <p style="margin-top: 15px;" class="barrukoText">
 
-                            Bestalde, langilea erabiltzailean sartuz gero, datu base barruan
-                            ditugun gailu guztiak bistaratzeko aukera ematen digu soilik.
+                        Bestalde, langilea erabiltzailean sartuz gero, datu base barruan ditugun gailu guztiak bistaratzeko aukera ematen digu soilik.
 
-                        </p>
-        
-                    </div>
+                    </p>
 
                 </div>
-        
-                <!-- COLUMNA BI | SECOND COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-1">
-                    
-                    <div>
 
-                        <img class="irudiak erdikoa" src="../irudiak/app22.jpg">
-
-                    </div>
-
-                </div>
             </div>
 
-            <!-- LAUGARREN FILA | QUARTER ROW -->
-            <div class="col-12 fleft" style="padding-top: 50px;">
+            <!-- COLUMNA BI | SECOND COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-1">
 
-                <!-- COLUMNA BAT | ONE COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-0">
-                    
-                    <iframe class="irudiak ytBideoa" width="100%" height="370" src="https://www.youtube.com/embed/X3r3S4iSCTM" allowfullscreen></iframe>
+                <div>
+
+                    <img class="irudiak erdikoa" src="../irudiak/app22.jpg">
 
                 </div>
-                    
-                <!-- COLUMNA BI | SECOND COLUMN -->
-                <div class="col-12 col-xl-6 fleft mt-1">
-                    <div class="textua tx_movil">
-                        
-                        <p class="barrukoText">
 
-                            Laburbilduz, inbentario aplikazioak, enpresaren informatika gailu guztiak
-                            ondo kudeatuta mantentzeko tresna da. Erabiltzaile desberdinak ditugu barruan.
-                            Administratzaileak, gailuak gehitu, baja eman edo bistaratzeko aukerak ditu,
-                            langileak ordea, bistaratzeko aukera besterik ez du izango.
+            </div>
+        </div>
 
-                        </p>
+        <!-- LAUGARREN FILA | QUARTER ROW -->
+        <div class="col-12 fleft" style="padding-top: 50px;">
 
-                        <p class="barrukoText">
+            <!-- COLUMNA BAT | ONE COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-0">
 
-                            Hemen duzu inbentario programa eskuratzeko aukera, baita gure eskutik
-                            emandako azalpen txiki bat, programa nola erabiltzen den edo zer egin
-                            dezaken berarekin jakiteko.
+                <iframe class="irudiak ytBideoa" width="100%" height="370" src="https://www.youtube.com/embed/X3r3S4iSCTM" allowfullscreen></iframe>
 
-                        </p>
+            </div>
 
-                        <div style="background-color: #00778b;  border-radius: 15px;">
-                            <a href="https://mega.nz/file/ZHkQmLLR#zMYUk6ZW0bQCgKRDEDmKLsFXAR-rrNPsX1faXvs_omE" style="text-decoration: none;">
-                                <span class="textua nav-text" style="margin-bottom: 10px; margin-top: 30px; font-size: 20px; justify-content: center; display: flex; color: white;">
+            <!-- COLUMNA BI | SECOND COLUMN -->
+            <div class="col-12 col-xl-6 fleft mt-1">
+                <div class="textua tx_movil">
+
+                    <p class="barrukoText">
+
+                        Laburbilduz, inbentario aplikazioak, enpresaren informatika gailu guztiak ondo kudeatuta mantentzeko tresna da. Erabiltzaile desberdinak ditugu barruan. Administratzaileak, gailuak gehitu, baja eman edo bistaratzeko aukerak ditu, langileak ordea, bistaratzeko
+                        aukera besterik ez du izango.
+
+                    </p>
+
+                    <p class="barrukoText">
+
+                        Hemen duzu inbentario programa eskuratzeko aukera, baita gure eskutik emandako azalpen txiki bat, programa nola erabiltzen den edo zer egin dezaken berarekin jakiteko.
+
+                    </p>
+
+                    <div style="background-color: #00778b;  border-radius: 15px;">
+                        <a href="https://mega.nz/file/ZHkQmLLR#zMYUk6ZW0bQCgKRDEDmKLsFXAR-rrNPsX1faXvs_omE" style="text-decoration: none;">
+                            <span class="textua nav-text" style="margin-bottom: 10px; margin-top: 30px; font-size: 20px; justify-content: center; display: flex; color: white;">
                                     PROGRAMA ESKURATU
                                 </span>
-                            </a>
-                        </div>
-
+                        </a>
                     </div>
+
                 </div>
             </div>
+        </div>
 
 
-            <!-- TARTEA EMATEKO | SPACE BETWEEN ROWS -->
-            <nav class="barra">
-            </nav>
+        <!-- TARTEA EMATEKO | SPACE BETWEEN ROWS -->
+        <nav class="barra">
+        </nav>
 
 
         <!-- SORTUKO DUGUN HURRENGO APP-aren PARTEA -->
 
-            <!-- COMING SOON TITLE -->
-            <div class="col-12 fleft">
+        <!-- COMING SOON TITLE -->
+        <div class="col-12 fleft">
+            <div class="textua tx_movil">
+
+                <h2 style="margin-bottom: 20px; font-weight: bold; display: flex; justify-content: center;">
+                    COMING SOON...
+                </h2>
+
+            </div>
+        </div>
+
+        <!-- COMING SOON -->
+        <div class="col-12 fleft">
+            <div class="col-12 col-xl-6 fleft mt-0">
+
+                <img class="irudiak" src="../irudiak/COMING.jpg" alt="">
+
+            </div>
+
+            <div class="col-12 col-xl-6 fleft mt-1">
                 <div class="textua tx_movil">
 
-                    <h2 style="margin-bottom: 20px; font-weight: bold; display: flex; justify-content: center;">
-                        COMING SOON...
-                    </h2>
+                    <p class="barrukoText">
+
+                        LAISTER EDUKIKO DITUGU ESKURATZEKO PROGRAMA BERRIAK.
+
+                    </p>
 
                 </div>
             </div>
+        </div>
 
-            <!-- COMING SOON -->
-            <div class="col-12 fleft">
-                <div class="col-12 col-xl-6 fleft mt-0">
-                    
-                    <img class="irudiak" src="../irudiak/COMING.jpg" alt="">
-
+        <!-- FOOTER | AZPIKO MENUA -->
+        <div class="footer-basic">
+            <footer>
+                <div class="social">
+                    <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
                 </div>
-        
-                <div class="col-12 col-xl-6 fleft mt-1">
-                    <div class="textua tx_movil">
-                        
-                        <p class="barrukoText">
-                            
-                            LAISTER EDUKIKO DITUGU ESKURATZEKO PROGRAMA BERRIAK.
+                <ul class="list-inline">
 
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOOTER | AZPIKO MENUA -->
-            <div class="footer-basic">
-                <footer>
-                    <div class="social">
-                        <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
-                        <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
-                        <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
-                    </div>
-                    <ul class="list-inline">
-                        
-                        <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
-                        <li class="list-inline-item"><a href="aplikazioak.html">Aplikazioak</a></li>
-                        <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
-                        <li class="list-inline-item"><a href="../KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
-                    </ul>
-                    <p class="copyright">TSB ENPRESA © 2023</p>
-                </footer>
-            </div>
+                    <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
+                    <li class="list-inline-item"><a href="aplikazioak.html">Aplikazioak</a></li>
+                    <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
+                    <li class="list-inline-item"><a href="../KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
+                </ul>
+                <p class="copyright">TSB ENPRESA © 2023</p>
+            </footer>
+        </div>
 
 
-        </section>
+    </section>
     <!-- WEB ORRIAREN BUKAERA | WEB PAGE, FINISH -->
 
-	<!-- JavaScript dokumentuaren link-a -->
-	<script src="aplikazioak.js"></script>
+    <!-- JavaScript dokumentuaren link-a -->
+    <script src="aplikazioak.js"></script>
 
     <!-- BOOTSTRAP eta behar ditudan Script-ak -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -340,4 +339,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

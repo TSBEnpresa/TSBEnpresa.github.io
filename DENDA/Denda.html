@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- WEB ORRIAREN TITULUA HASIERA -->
-	<title>TSB | Denda & Merchandising</title>
+    <title>TSB | Denda & Merchandising</title>
     <!-- WEB ORRIAREN TITULUA BUKAERA -->
 
     <!-- BOOTSTRAP Link -->
@@ -16,34 +17,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <!-- JQUERY Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
     <!-- LEHIOAREN IRUDIA -->
     <link rel="shortcut icon" href="../irudiak/LOGO.png" />
-	
+
     <!-- CSS -->
     <link rel="stylesheet" href="Denda.css">
-    
+
     <!-- MENUAREN IKONOAK -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
 </head>
+
 <body>
-    
-<!-- MENUAREN HASIERA, menu hau web orriaren menu printzipala da,
-    azkenean beti eskura edukiko dugun menua da -->
+
+    <!-- WEB ORRI MENUA | MENU OF WEB PAGE -->
     <nav class="tsb-sidebar close">
         <header>
             <div class="irudia-textua">
                 <span class="irudia">
+                    <!-- Goi buruaren logoa -->
                     <img src="../irudiak/LOGO.png" alt="">
                 </span>
 
                 <div class="textua logo-textua">
+                    <!-- Goi buru textua -->
                     <span class="izena"><p id="izenaBistaratu"></p></span>
                     <span class="ongiEtorria">ONGI ETORRI!</span>
                 </div>
@@ -56,35 +59,40 @@
             <div class="tsb-menu">
 
                 <li class="search-box">
+                    <!-- Bilaketa opzioa | Search option -->
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Bilatu...">
                 </li>
 
                 <ul class="tsb-menu-links">
                     <li class="tsb-nav-link">
+                        <!-- Hasiera botoia | Home buttom -->
                         <a href="../index.html">
-                            <i class='bx bx-home-alt icon' ></i>
+                            <i class='bx bx-home-alt icon'></i>
                             <span class="textua nav-text">Hasiera</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Aplikazio botoia | App buttom -->
                         <a href="../APLIKAZIOA/aplikazioak.html">
-                            <i class='bx bx-window icon' ></i>
+                            <i class='bx bx-window icon'></i>
                             <span class="textua nav-text">Aplikazioak</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Denda botoia | Store buttom -->
                         <a href="../DENDA/Denda.html">
-							<i class='bx bx-shopping-bag icon'></i>
+                            <i class='bx bx-shopping-bag icon'></i>
                             <span class="textua nav-text">Denda</span>
                         </a>
                     </li>
 
                     <li class="tsb-nav-link">
+                        <!-- Kontaktua botoia | Contact buttom -->
                         <a href="../KONTAKTUA/KONTAKTUA.html">
-                            <i class='bx bxs-contact icon' ></i>
+                            <i class='bx bxs-contact icon'></i>
                             <span class="textua nav-text">Kontaktua</span>
                         </a>
                     </li>
@@ -94,61 +102,64 @@
 
             <div class="bottom-content">
                 <li class="">
+                    <!-- Identifikazio botoia | Identify buttom -->
                     <a href="../identifikatu/identifikatu.html" id="identifikatuBtn">
                         <i class='bx bx-user icon'></i>
                         <span class="textua nav-text">Identifikatu</span>
                     </a>
                 </li>
 
-            <div class="bottom-content">
-                <li class="">
-                    <a href="../ENG WEB PAGE/DENDA/Denda.html">
-                        <i class='bx bx-message-dots icon'></i>
-                        <span class="textua nav-text">EUS | ENG</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text textua">Modu iluna</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-
-                <center>
-                <div class="bottom-content" style="width: 62px;">
+                <div class="bottom-content">
                     <li class="">
-                        <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="textua nav-text"></span>
+                        <!-- Hizkuntzaz aldatzeko botoia | Change lenguage buttom -->
+                        <a href="../ENG WEB PAGE/DENDA/Denda.html">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="textua nav-text">EUS | ENG</span>
                         </a>
                     </li>
-                </center>
-                
-            </div>
-        </div>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <!-- Modu iluna edo argia jartzeko opzioa | change color mode -->
+                        <span class="mode-text textua">Modu iluna</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+
+                    <center>
+                        <div class="bottom-content" style="width: 62px;">
+                            <li class="">
+                                <!-- Erabiltzailetik atera | User Log out -->
+                                <a href="#" id="IrteeraBTN" onclick="erabiltzaileIrten()">
+                                    <i class='bx bx-log-out icon'></i>
+                                    <span class="textua nav-text"></span>
+                                </a>
+                            </li>
+                    </center>
+
+                    </div>
+                </div>
 
     </nav>
-<!-- MENUAREN BUKAERA -->
 
 
-<!-- WEB ORRIAREN HASIERA -->
+    <!-- WEB ORRIAREN HASIERA | BEGINNING WEB PAGE -->
     <section class="home home_movil">
         <div class="textua tx_movil">
-            
-            <!-- BANNER DENDA HASIERA || SHOP BANNER START --> 
+
+            <!-- BANNER DENDA HASIERA || SHOP BANNER START -->
             <img class="banner" src="bannerdenda.png" alt="">
             <!-- BANNER DENDA BUKAERA || SHOP BANNER FINISH -->
 
 
             <nav class="barra">
             </nav>
-            
+
 
             <!-- KATEGORIAK || CATEGORIES -->
             <div class="row col-12">
@@ -169,10 +180,8 @@
                     <form action="#gehigarriak">
                         <button class="kategoriak">GEHIGARRIAK</button>
                     </form>
-                </div>                
+                </div>
             </div>
-            <!-- KATEGORIAK BUAKERA -->
-
 
             <nav class="barra">
             </nav>
@@ -286,7 +295,7 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                     </div>
                     <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
@@ -298,38 +307,36 @@
 
             <nav class="barra">
             </nav>
-            
+
 
             <!-- KATEGORIAK || CATEGORIES -->
             <div class="col-12 textua">
 
                 <p style="font-size: 17px;">
-                    
-                    Gure enpresa dauden artikuluak eskuratzeko prozedura sinple bat dugu. Zure eskaria jaso eta zure 
-                    beharretara egokitutako artikulua emateko, gurekin harremanetan jarri behar duzu korreo elektronikoaren bidez. 
-                    Horretarako, gure helbide elektronikoan idatzi eta gure erantzuna jasotzen dutenean, artikuluaren eskuragarritasuna egiaztatu ahal izango duzu.
+
+                    Gure enpresa dauden artikuluak eskuratzeko prozedura sinple bat dugu. Zure eskaria jaso eta zure beharretara egokitutako artikulua emateko, gurekin harremanetan jarri behar duzu korreo elektronikoaren bidez. Horretarako, gure helbide elektronikoan idatzi
+                    eta gure erantzuna jasotzen dutenean, artikuluaren eskuragarritasuna egiaztatu ahal izango duzu.
 
                 </p>
 
                 <p style="font-size: 17px;">
-                    
-                    Gure helburua da zure esperientzia erosketa erraz eta zuzena izatea. Horregatik, zure eskaera zuzenki prozesatuz eta zure beharretara egokitutako produktua 
-                    eskaintzeko gurekin harremanetan jarriaz. Esku artean duzun artikulua jasotzeko, korreo elektronikoaren bidez gurekin harremanetan jarri eta zure eskaria bidali dezakezu. 
-                    Zure eskaerara erantzun dezagun ahalik eta azkarrenean! Eskerrik asko zure interesa agertzeagatik.
+
+                    Gure helburua da zure esperientzia erosketa erraz eta zuzena izatea. Horregatik, zure eskaera zuzenki prozesatuz eta zure beharretara egokitutako produktua eskaintzeko gurekin harremanetan jarriaz. Esku artean duzun artikulua jasotzeko, korreo elektronikoaren
+                    bidez gurekin harremanetan jarri eta zure eskaria bidali dezakezu. Zure eskaerara erantzun dezagun ahalik eta azkarrenean! Eskerrik asko zure interesa agertzeagatik.
 
                 </p>
-                    
-                
-                                
+
+
+
             </div>
             <!-- KATEGORIAK BUAKERA -->
 
             <nav class="barra">
             </nav>
 
-          
 
-        <!-- DENDAKO PRODUKTUAK HASIERA -->
+
+            <!-- DENDAKO PRODUKTUAK HASIERA -->
 
             <!-- KAMISETAK -->
             <center>
@@ -337,7 +344,7 @@
             </center>
 
             <div class="dendaKartak " style="text-align: center; margin: 0 auto;">
-                
+
                 <div class="slick kartaTartea">
                     <div>
                         <a href="#">
@@ -350,18 +357,18 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
-                            <a href="#">
-                                <h4><small>TXURIA BASIC</small>14.90€</h4>
-                                <picture>
-                                    <img src="Artikuluak/Kamisetak/txuriaBasic.jpg" alt="Image">
-                                </picture>
-                            </a>
+                        <a href="#">
+                            <h4><small>TXURIA BASIC</small>14.90€</h4>
+                            <picture>
+                                <img src="Artikuluak/Kamisetak/txuriaBasic.jpg" alt="Image">
+                            </picture>
+                        </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -372,7 +379,7 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -410,18 +417,18 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
-                            <a href="#">
-                                <h4><small>NARANJA ELEMENT</small>19.90€</h4>
-                                <picture>
-                                    <img src="Artikuluak/Kamisetak/NaranjaNew.jpg" alt="Image">
-                                </picture>
-                            </a>
+                        <a href="#">
+                            <h4><small>NARANJA ELEMENT</small>19.90€</h4>
+                            <picture>
+                                <img src="Artikuluak/Kamisetak/NaranjaNew.jpg" alt="Image">
+                            </picture>
+                        </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -432,7 +439,7 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -456,7 +463,7 @@
                     </div>
                 </div>
 
-            </div> 
+            </div>
             <!-- KAMISETAK BUKAERA -->
 
             <!-- JERTSEA -->
@@ -465,7 +472,7 @@
             </center>
 
             <div class="dendaKartak " style="text-align: center; margin: 0 auto;">
-                
+
                 <div class="slick kartaTartea">
                     <div>
                         <a href="#">
@@ -477,18 +484,18 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
-                            <a href="#">
-                                <h4><small>GRISA BASIC</small>24.90€</h4>
-                                <picture>
-                                    <img src="Artikuluak/Jertseak/GrisaBasic.jpg" alt="Image">
-                                </picture>
-                            </a>
+                        <a href="#">
+                            <h4><small>GRISA BASIC</small>24.90€</h4>
+                            <picture>
+                                <img src="Artikuluak/Jertseak/GrisaBasic.jpg" alt="Image">
+                            </picture>
+                        </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -499,7 +506,7 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -536,21 +543,21 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
-                            <a href="#">
-                                <h4><small>URDINA ELEMENT</small>29.90€</h4>
-                                <picture>
-                                    <img src="Artikuluak/Jertseak/UrdinaNew.jpg" alt="Image">
-                                </picture>
-                            </a>
+                        <a href="#">
+                            <h4><small>URDINA ELEMENT</small>29.90€</h4>
+                            <picture>
+                                <img src="Artikuluak/Jertseak/UrdinaNew.jpg" alt="Image">
+                            </picture>
+                        </a>
                     </div>
-                </div> 
+                </div>
 
 
-            </div> 
+            </div>
             <!-- JERTSEA BUKAERA -->
 
             <!-- GEHIGARRIAK -->
@@ -559,7 +566,7 @@
             </center>
 
             <div class="dendaKartak " style="text-align: center; margin: 0 auto;">
-                
+
                 <div class="slick kartaTartea">
                     <div>
                         <a href="#">
@@ -571,18 +578,18 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
-                            <a href="#">
-                                <h4><small>POLTSA TSB</small>13.40€</h4>
-                                <picture>
-                                    <img src="Artikuluak/Gehigarriak/poltsaTSB.jpg" alt="Image">
-                                </picture>
-                            </a>
+                        <a href="#">
+                            <h4><small>POLTSA TSB</small>13.40€</h4>
+                            <picture>
+                                <img src="Artikuluak/Gehigarriak/poltsaTSB.jpg" alt="Image">
+                            </picture>
+                        </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -593,7 +600,7 @@
                             </picture>
                         </a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="slick kartaTartea">
                     <div>
@@ -618,45 +625,44 @@
                 </div>
 
 
-            </div> 
+            </div>
             <!-- GEHIGARRIAK BUKAERA -->
 
-            
-
-        <!-- DENDAKO PRODUKTUAK BUKAERA -->
-        
 
 
-        <!-- FOOTERRA -->
-        <div class="footer-basic">
-            <footer>
-                <div class="social">
-                    <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
-                    <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
-                    <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
-                </div>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
-                    <li class="list-inline-item"><a href="../APLIKAZIOA/aplikazioak.html">Aplikazioak</a></li>
-                    <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
-                    <li class="list-inline-item"><a href="../KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
-                </ul>
-                <p class="copyright">TSB ENPRESA © 2023</p>
-            </footer>
-        </div>
+            <!-- DENDAKO PRODUKTUAK BUKAERA -->
+
+
+
+            <!-- FOOTERRA -->
+            <div class="footer-basic">
+                <footer>
+                    <div class="social">
+                        <a href="https://www.instagram.com/tsb/"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="https://www.youtube.com/@tsb"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://twitter.com/TSB"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.facebook.com/TSBbankUK"><i class='bx bxl-facebook-circle' ></i></a>
+                    </div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="../index.html">Hasiera</a></li>
+                        <li class="list-inline-item"><a href="../APLIKAZIOA/aplikazioak.html">Aplikazioak</a></li>
+                        <li class="list-inline-item"><a href="../DENDA/Denda.html">Denda</a></li>
+                        <li class="list-inline-item"><a href="../KONTAKTUA/KONTAKTUA.html">Kontaktua</a></li>
+                    </ul>
+                    <p class="copyright">TSB ENPRESA © 2023</p>
+                </footer>
+            </div>
 
     </section>
     <!-- WEB ORRIAREN BUKAERA -->
 
 
-	<!-- JavaScript dokumentuaren link-a -->
-	<script src="Denda.js"></script>
+    <!-- JavaScript dokumentuaren link-a -->
+    <script src="Denda.js"></script>
 
     <!-- BOOTSTRAP eta behar ditudan Script-ak -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
