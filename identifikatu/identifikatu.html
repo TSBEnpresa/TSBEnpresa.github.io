@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,45 +29,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 </head>
+
 <body>
-    
+
     <div class="content">
 
+        <!-- Web Orriaren titulua | title of website -->
         <h1 class="logo" style="color: #0b1116;">TSB <span>IDENTIFIKATU</span></h1>
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
-                
+
+                <!-- Titulua | Title -->
                 <h3>IDENTIFIKATU</h3>
-    
+
+                <!-- Formularioa | Form -->
                 <form action="" onsubmit="return validarFormulario()">
 
+                    <!-- Erabiltzailearen izena jasotzen duen input-a | Input that collects the username data -->
                     <p class="block">
                         <label>Erabiltzaile izena</label>
                         <input class="required" type="text" name="fullname" id="inputIzena" placeholder="Erabiltzailea" required>
-
-                        
                     </p>
 
+                    <!-- Gure irakurri duela baiezteko | To confirm that you have read our rules -->
                     <p class="block"><input style="width: 2%; margin-right: 10px;" type="checkbox" required>Zuek jarritako araudia irakurri eta onartzen dut.</p>
-                    <!--<p>
-                        <label>Telefono Zenbakia</label>
-                        <input type="tel" name="phone">
-                    </p>
-                    <p>
-                        <label>Affair</label>
-                        <input type="text" name="affair">
-                    </p>-->
-
-                    <!--<p class="block">
-                        <label>Captch-a bete</label> 
-                         <div class="h-captcha" data-sitekey="6fbafa1e-757b-4af9-9084-fd228050fde4"></div>
-                     </p>-->
 
                     <div class="block">
-                        
+
                     </div>
 
+                    <!-- Web Orrira sartzeko botoia | Button to access the website -->
                     <p class="block">
                         <button type="submit" id="webOrriraSartuBtn">
                             WEB ORRIRA SARTU
@@ -74,7 +67,8 @@
                     </p>
                 </form>
             </div>
-            
+
+            <!-- Empresa eta kontaktureko informazioa | contact and company information -->
             <div class="contact-info">
                 <h4>Informazio gehiago</h4>
                 <ul>
@@ -96,4 +90,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
